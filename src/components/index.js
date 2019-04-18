@@ -8,8 +8,10 @@ import RHAppView from "./RHAppView.vue";
 import RHArticleCard from "./RHArticleCard.vue";
 import RHArticleView from "./RHArticleView.vue";
 import RHAuthorView from "./RHArticleView.vue";
+import RHBaseToolbar from "./RHBaseToolbar.vue";
 import RHDatasetCard from "./RHDatasetCard.vue";
 import RHDatasetView from "./RHDatasetView.vue";
+import RHFooter from "./RHFooter.vue";
 
 Vue.use(Vuetify);
 
@@ -19,8 +21,10 @@ const Components = {
   RHArticleCard,
   RHArticleView,
   RHAuthorView,
+  RHBaseToolbar,
   RHDatasetCard,
-  RHDatasetView
+  RHDatasetView,
+  RHFooter
 };
 
 Object.keys(Components).forEach(name => {
