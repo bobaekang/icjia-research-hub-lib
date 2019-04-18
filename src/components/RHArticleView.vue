@@ -1,6 +1,9 @@
 <template>
   <div class="mb-5">
-    <SocialSharing :url="baseUrl + article.slug" :title="article.title" />
+    <ArticleSocialSharing
+      :url="baseUrl + article.slug"
+      :title="article.title"
+    />
 
     <v-img :height="splashHeight" :src="article.splash"></v-img>
 
@@ -13,7 +16,7 @@
             'sidebar-lg-and-up': !isMedium
           }"
         >
-          <ArticleViewTOC
+          <ArticleTOC
             :headings="headings"
             :activeHeading="activeHeading"
             v-scroll="onScrollTOC"
@@ -136,10 +139,10 @@
 
 <script>
 import { allContentMixin } from "@/mixins/contentMixin";
-import ArticleViewTOC from "@/components/ArticleViewTOC";
+import ArticleTOC from "@/components/ArticleTOC";
 import BaseButton from "@/components/BaseButton";
 import BasePropChip from "@/components/BasePropChip";
-import SocialSharing from "@/components/SocialSharing";
+import ArticleSocialSharing from "@/components/ArticleSocialSharing";
 
 const mdOpts = {
   html: true,
@@ -164,10 +167,10 @@ const md = require("markdown-it")(mdOpts)
 export default {
   mixins: [allContentMixin],
   components: {
-    ArticleViewTOC,
+    ArticleTOC,
     BaseButton,
     BasePropChip,
-    SocialSharing
+    ArticleSocialSharing
   },
   props: {
     item: Object
