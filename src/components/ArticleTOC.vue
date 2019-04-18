@@ -25,10 +25,10 @@ export default {
     headings: NodeList,
     activeHeading: String
   }
-}
+};
 </script>
 
-<style>
+<style scoped>
 #toc .v-list {
   background: none;
 }
