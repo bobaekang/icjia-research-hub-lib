@@ -1,5 +1,12 @@
-@import url("https://fonts.googleapis.com/css?family=Lato");
+@import url("https://fonts.googleapis.com/css?family=Gentium+Book+Basic");
 @import url("https://fonts.googleapis.com/css?family=Oswald");
+@import url("https://fonts.googleapis.com/css?family=Lato");
+
+.application {
+  color: #333;
+  font-family: "Gentium Book Basic", serif;
+  font-size: 16px;
+}
 
 h1 {
   font-family: "Oswald", sans-serif;
