@@ -9,7 +9,33 @@
 
       <v-spacer />
 
-      <!-- <DatasetDownloadButton :id="dataset._id" :isDataCsv="isDataCsv" /> -->
+      <div class="text-xs-center">
+        <v-dialog persistent v-model="dialog" width="500">
+          <v-btn slot="activator" class="mr-0" flat>
+            <template>{{ "Download" }}</template>
+            <v-icon>file_download</v-icon>
+          </v-btn>
+
+          <v-card>
+            <v-card-title class="grey lighten-2">
+              <h3>Did you read the metadata?</h3>
+            </v-card-title>
+
+            <v-card-text>{{ msgDialog }} </v-card-text>
+
+            <v-divider></v-divider>
+
+            <v-card-actions>
+              <v-spacer></v-spacer>
+              <v-btn flat class="mr-0" @click="downloadHelper">
+                <template>{{ "Yes, download" }}</template>
+              </v-btn>
+
+              <v-btn flat class="mr-0" @click="dialog = false">Back</v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-dialog>
+      </div>
 
       <BaseButton to="/datasets">back</BaseButton>
     </v-card-title>
@@ -115,7 +141,6 @@ import { allContentMixin, datasetMixin } from "@/mixins/contentMixin";
 import BaseButton from "@/components/BaseButton";
 import BasePropChip from "@/components/BasePropChip";
 import BasePropDisplay from "@/components/BasePropDisplay";
-// import DatasetDownloadButton from "@/components/DatasetDownloadButton";
 
 export default {
   mixins: [allContentMixin, datasetMixin],
@@ -123,10 +148,17 @@ export default {
     BaseButton,
     BasePropChip,
     BasePropDisplay
-    // DatasetDownloadButton
   },
   props: {
-    item: Object
+    item: Object,
+    downloadData: Function
+  },
+  data() {
+    return {
+      dialog: false,
+      msgDialog:
+        "It is important for you to know the context of the dataset you are about to download. Make sure you have read and understand the metatdata shown in this page before using the dataset."
+    };
   },
   computed: {
     dataset() {
@@ -174,6 +206,10 @@ export default {
         body +
         "</tbody></table>"
       );
+    },
+    async downloadHelper() {
+      await this.downloadData(this.dataset._id, this.isDataCsv);
+      this.dialog = false;
     }
   }
 };
