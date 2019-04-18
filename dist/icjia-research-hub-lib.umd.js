@@ -38481,12 +38481,12 @@ var component = normalizeComponent(
 )
 
 /* harmony default export */ var BaseButton = (component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"6a83156a-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/BasePropChip.vue?vue&type=template&id=213a8f63&
-var BasePropChipvue_type_template_id_213a8f63_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('v-chip',{staticClass:"font-lato uppercase",attrs:{"disabled":"","small":"","text-color":"#333"}},[_vm._t("default")],2)}
-var BasePropChipvue_type_template_id_213a8f63_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"6a83156a-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/BasePropChip.vue?vue&type=template&id=86577780&
+var BasePropChipvue_type_template_id_86577780_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('v-chip',{staticClass:"font-lato uppercase",attrs:{"disabled":"","small":"","text-color":"#333"}},[_vm._t("default")],2)}
+var BasePropChipvue_type_template_id_86577780_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/BasePropChip.vue?vue&type=template&id=213a8f63&
+// CONCATENATED MODULE: ./src/components/BasePropChip.vue?vue&type=template&id=86577780&
 
 // CONCATENATED MODULE: ./src/components/BasePropChip.vue
 
@@ -38497,8 +38497,8 @@ var script = {}
 
 var BasePropChip_component = normalizeComponent(
   script,
-  BasePropChipvue_type_template_id_213a8f63_render,
-  BasePropChipvue_type_template_id_213a8f63_staticRenderFns,
+  BasePropChipvue_type_template_id_86577780_render,
+  BasePropChipvue_type_template_id_86577780_staticRenderFns,
   false,
   null,
   null,
