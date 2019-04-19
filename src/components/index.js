@@ -1,5 +1,6 @@
 import Vue from "vue";
 import Vuetify from "vuetify";
+import SocialSharing from "vue-social-sharing";
 import "vuetify/dist/vuetify.min.css";
 import "@/assets/style.css";
 
@@ -14,6 +15,7 @@ import RHDatasetView from "./RHDatasetView.vue";
 import RHFooter from "./RHFooter.vue";
 
 Vue.use(Vuetify);
+Vue.use(SocialSharing);
 
 const Components = {
   RHAppCard,
