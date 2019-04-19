@@ -7,7 +7,7 @@ import RHAppCard from "./RHAppCard.vue";
 import RHAppView from "./RHAppView.vue";
 import RHArticleCard from "./RHArticleCard.vue";
 import RHArticleView from "./RHArticleView.vue";
-import RHAuthorView from "./RHArticleView.vue";
+import RHAuthorView from "./RHAuthorView.vue";
 import RHBaseToolbar from "./RHBaseToolbar.vue";
 import RHDatasetCard from "./RHDatasetCard.vue";
 import RHDatasetView from "./RHDatasetView.vue";
