@@ -23,7 +23,7 @@
         <div class="my-3">
           <h2 class="mb-3 light">Articles by this author</h2>
           <v-flex v-for="article in articles" :key="article.id" class="mb-3">
-            <ArticleCard :item="article" />
+            <RHArticleCard :item="article" />
           </v-flex>
         </div>
       </template>
@@ -32,9 +32,7 @@
 </template>
 
 <script>
-// import { sortByDate } from "@/services/utils";
-// import client from "@/services/client";
-import ArticleCard from "@/components/ArticleCard";
+import RHArticleCard from "@/components/RHArticleCard";
 
 function sortByDate(items) {
   return items.sort((a, b) => {
@@ -46,11 +44,11 @@ function sortByDate(items) {
 
 export default {
   components: {
-    ArticleCard
+    RHArticleCard
   },
   props: {
     item: Object,
-    client: Object
+    getArticleInfo: Function
   },
   data() {
     return {
@@ -67,7 +65,7 @@ export default {
     this.articleIds = this.item.articles;
     Promise.all(
       this.item.articles.map(async el => {
-        const res = await client.getArticleInfo(el._id);
+        const res = await this.getArticleInfo(el._id);
         return res.data.data.article;
       })
     ).then(articles => {
@@ -79,7 +77,7 @@ export default {
       this.articleIds = this.item.articles;
       Promise.all(
         this.item.articles.map(async el => {
-          const res = await client.getArticleInfo(el._id);
+          const res = await this.getArticleInfo(el._id);
           return res.data.data.article;
         })
       ).then(articles => {
