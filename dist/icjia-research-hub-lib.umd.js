@@ -3108,6 +3108,23 @@ module.exports = function (it) {
 
 /***/ }),
 
+/***/ "2f21":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var fails = __webpack_require__("79e5");
+
+module.exports = function (method, arg) {
+  return !!method && fails(function () {
+    // eslint-disable-next-line no-useless-call
+    arg ? method.call(null, function () { /* empty */ }, 1) : method.call(null);
+  });
+};
+
+
+/***/ }),
+
 /***/ "3024":
 /***/ (function(module, exports) {
 
@@ -5136,6 +5153,37 @@ module.exports = function (key) {
 
 /***/ }),
 
+/***/ "55dd":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var $export = __webpack_require__("5ca1");
+var aFunction = __webpack_require__("d8e8");
+var toObject = __webpack_require__("4bf8");
+var fails = __webpack_require__("79e5");
+var $sort = [].sort;
+var test = [1, 2, 3];
+
+$export($export.P + $export.F * (fails(function () {
+  // IE8-
+  test.sort(undefined);
+}) || !fails(function () {
+  // V8 bug
+  test.sort(null);
+  // Old WebKit
+}) || !__webpack_require__("2f21")($sort)), 'Array', {
+  // 22.1.3.25 Array.prototype.sort(comparefn)
+  sort: function sort(comparefn) {
+    return comparefn === undefined
+      ? $sort.call(toObject(this))
+      : $sort.call(toObject(this), aFunction(comparefn));
+  }
+});
+
+
+/***/ }),
+
 /***/ "565b":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5342,6 +5390,31 @@ $export.W = 32;  // wrap
 $export.U = 64;  // safe
 $export.R = 128; // real proto method for `library`
 module.exports = $export;
+
+
+/***/ }),
+
+/***/ "5df3":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var $at = __webpack_require__("02f4")(true);
+
+// 21.1.3.27 String.prototype[@@iterator]()
+__webpack_require__("01f9")(String, 'String', function (iterated) {
+  this._t = String(iterated); // target
+  this._i = 0;                // next index
+// 21.1.5.2.1 %StringIteratorPrototype%.next()
+}, function () {
+  var O = this._t;
+  var index = this._i;
+  var point;
+  if (index >= O.length) return { value: undefined, done: true };
+  point = $at(O, index);
+  this._i += point.length;
+  return { value: point, done: false };
+});
 
 
 /***/ }),
@@ -39494,6 +39567,238 @@ var RHArticleView_component = normalizeComponent(
 )
 
 /* harmony default export */ var RHArticleView = (RHArticleView_component.exports);
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"6a83156a-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/RHAuthorView.vue?vue&type=template&id=5e9a374f&
+var RHAuthorViewvue_type_template_id_5e9a374f_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('v-card',{staticClass:"mb-5"},[_c('v-card-title',{attrs:{"primary-title":""}},[_c('h2',[_c('span',{staticClass:"small pl-2",staticStyle:{"color":"#666"}},[_vm._v("Authors")]),_c('v-icon',[_vm._v("chevron_right")]),[_vm._v(_vm._s(_vm.author.title))]],2)]),_c('v-divider'),_c('v-container',[_c('div',{staticClass:"mb-3"},[_c('h2',{staticClass:"mb-3 light"},[_vm._v("About this author")]),(_vm.author.description)?_c('p',[_vm._v(_vm._s(_vm.author.description))]):_c('p',{staticClass:"italic"},[_vm._v("(No description.)")])]),(_vm.author.articles.length > 0)?[_c('v-divider'),_c('div',{staticClass:"my-3"},[_c('h2',{staticClass:"mb-3 light"},[_vm._v("Articles by this author")]),_vm._l((_vm.articles),function(article){return _c('v-flex',{key:article.id,staticClass:"mb-3"},[_c('RHArticleCard',{attrs:{"item":article}})],1)})],2)]:_vm._e()],2)],1)}
+var RHAuthorViewvue_type_template_id_5e9a374f_staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/components/RHAuthorView.vue?vue&type=template&id=5e9a374f&
+
+// EXTERNAL MODULE: ./node_modules/regenerator-runtime/runtime.js
+var runtime = __webpack_require__("96cf");
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime-corejs2/core-js/promise.js
+var promise = __webpack_require__("795b");
+var promise_default = /*#__PURE__*/__webpack_require__.n(promise);
+
+// CONCATENATED MODULE: ./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
+  try {
+    var info = gen[key](arg);
+    var value = info.value;
+  } catch (error) {
+    reject(error);
+    return;
+  }
+
+  if (info.done) {
+    resolve(value);
+  } else {
+    promise_default.a.resolve(value).then(_next, _throw);
+  }
+}
+
+function _asyncToGenerator(fn) {
+  return function () {
+    var self = this,
+        args = arguments;
+    return new promise_default.a(function (resolve, reject) {
+      var gen = fn.apply(self, args);
+
+      function _next(value) {
+        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);
+      }
+
+      function _throw(err) {
+        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);
+      }
+
+      _next(undefined);
+    });
+  };
+}
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es6.array.iterator.js
+var es6_array_iterator = __webpack_require__("cadf");
+
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es6.string.iterator.js
+var es6_string_iterator = __webpack_require__("5df3");
+
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es6.array.sort.js
+var es6_array_sort = __webpack_require__("55dd");
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/RHAuthorView.vue?vue&type=script&lang=js&
+
+
+
+
+
+
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+function sortByDate(items) {
+  return items.sort(function (a, b) {
+    if (a.date < b.date) return 1;
+    if (a.date > b.date) return -1;
+    return 0;
+  });
+}
+
+/* harmony default export */ var RHAuthorViewvue_type_script_lang_js_ = ({
+  components: {
+    RHArticleCard: RHArticleCard
+  },
+  props: {
+    item: Object,
+    getArticleInfo: Function
+  },
+  data: function data() {
+    return {
+      articles: [],
+      articleIds: []
+    };
+  },
+  computed: {
+    author: function author() {
+      return this.item;
+    }
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    this.articleIds = this.item.articles;
+
+    promise_default.a.all(this.item.articles.map(
+    /*#__PURE__*/
+    function () {
+      var _ref = _asyncToGenerator(
+      /*#__PURE__*/
+      regeneratorRuntime.mark(function _callee(el) {
+        var res;
+        return regeneratorRuntime.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.next = 2;
+                return _this.getArticleInfo(el._id);
+
+              case 2:
+                res = _context.sent;
+                return _context.abrupt("return", res.data.data.article);
+
+              case 4:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }));
+
+      return function (_x) {
+        return _ref.apply(this, arguments);
+      };
+    }())).then(function (articles) {
+      _this.articles = sortByDate(articles);
+    });
+  },
+  beforeUpdate: function beforeUpdate() {
+    var _this2 = this;
+
+    if (this.articleIds !== this.item.articles) {
+      this.articleIds = this.item.articles;
+
+      promise_default.a.all(this.item.articles.map(
+      /*#__PURE__*/
+      function () {
+        var _ref2 = _asyncToGenerator(
+        /*#__PURE__*/
+        regeneratorRuntime.mark(function _callee2(el) {
+          var res;
+          return regeneratorRuntime.wrap(function _callee2$(_context2) {
+            while (1) {
+              switch (_context2.prev = _context2.next) {
+                case 0:
+                  _context2.next = 2;
+                  return _this2.getArticleInfo(el._id);
+
+                case 2:
+                  res = _context2.sent;
+                  return _context2.abrupt("return", res.data.data.article);
+
+                case 4:
+                case "end":
+                  return _context2.stop();
+              }
+            }
+          }, _callee2);
+        }));
+
+        return function (_x2) {
+          return _ref2.apply(this, arguments);
+        };
+      }())).then(function (articles) {
+        _this2.articles = sortByDate(articles);
+      });
+    }
+  }
+});
+// CONCATENATED MODULE: ./src/components/RHAuthorView.vue?vue&type=script&lang=js&
+ /* harmony default export */ var components_RHAuthorViewvue_type_script_lang_js_ = (RHAuthorViewvue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./src/components/RHAuthorView.vue
+
+
+
+
+
+/* normalize component */
+
+var RHAuthorView_component = normalizeComponent(
+  components_RHAuthorViewvue_type_script_lang_js_,
+  RHAuthorViewvue_type_template_id_5e9a374f_render,
+  RHAuthorViewvue_type_template_id_5e9a374f_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* harmony default export */ var RHAuthorView = (RHAuthorView_component.exports);
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"6a83156a-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/RHBaseToolbar.vue?vue&type=template&id=bed35360&scoped=true&
 var RHBaseToolbarvue_type_template_id_bed35360_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('v-toolbar',{attrs:{"id":"toolbar","height":_vm.hpixel,"fixed":"","scroll-off-screen":""}},[_c('a',{staticClass:"hidden-xs-only",attrs:{"href":_vm.logo.href,"target":"_blank"}},[_c('img',{attrs:{"src":_vm.logo.url,"height":_vm.logoHpixel,"alt":"logo"}})]),_c('router-link',{attrs:{"to":"/"}},[_c('v-toolbar-title',[[_vm._v(_vm._s(_vm.titleUpper))],_vm._t("titleExtra")],2)],1),_c('v-spacer'),_c('v-toolbar-items',{staticClass:"hidden-sm-and-down"},[_vm._t("toolbarItems")],2),(_vm.menu)?_c('v-btn',{staticClass:"hidden-md-and-up",attrs:{"flat":"","icon":""},on:{"click":function($event){_vm.drawer = !_vm.drawer}}},[_c('v-icon',[_vm._v("menu")])],1):_vm._e()],1),_c('div',{style:({ height: _vm.hpixel, backgroundColor: '#466c8c' })}),_c('v-navigation-drawer',{attrs:{"temporary":"","right":"","app":"","width":"175"},model:{value:(_vm.drawer),callback:function ($$v) {_vm.drawer=$$v},expression:"drawer"}},[_c('v-list',{staticClass:"slot"},[_vm._t("toolbarDrawerItems")],2)],1)],1)}
 var RHBaseToolbarvue_type_template_id_bed35360_scoped_true_staticRenderFns = []
@@ -39709,51 +40014,6 @@ var RHDatasetViewvue_type_template_id_26ac55da_scoped_true_staticRenderFns = []
 
 // CONCATENATED MODULE: ./src/components/RHDatasetView.vue?vue&type=template&id=26ac55da&scoped=true&
 
-// EXTERNAL MODULE: ./node_modules/regenerator-runtime/runtime.js
-var runtime = __webpack_require__("96cf");
-
-// EXTERNAL MODULE: ./node_modules/@babel/runtime-corejs2/core-js/promise.js
-var promise = __webpack_require__("795b");
-var promise_default = /*#__PURE__*/__webpack_require__.n(promise);
-
-// CONCATENATED MODULE: ./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js
-
-
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
-  try {
-    var info = gen[key](arg);
-    var value = info.value;
-  } catch (error) {
-    reject(error);
-    return;
-  }
-
-  if (info.done) {
-    resolve(value);
-  } else {
-    promise_default.a.resolve(value).then(_next, _throw);
-  }
-}
-
-function _asyncToGenerator(fn) {
-  return function () {
-    var self = this,
-        args = arguments;
-    return new promise_default.a(function (resolve, reject) {
-      var gen = fn.apply(self, args);
-
-      function _next(value) {
-        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);
-      }
-
-      function _throw(err) {
-        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);
-      }
-
-      _next(undefined);
-    });
-  };
-}
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/RHDatasetView.vue?vue&type=script&lang=js&
 
 
@@ -40094,7 +40354,7 @@ var Components = {
   RHAppView: RHAppView,
   RHArticleCard: RHArticleCard,
   RHArticleView: RHArticleView,
-  RHAuthorView: RHArticleView,
+  RHAuthorView: RHAuthorView,
   RHBaseToolbar: RHBaseToolbar,
   RHDatasetCard: RHDatasetCard,
   RHDatasetView: RHDatasetView,
