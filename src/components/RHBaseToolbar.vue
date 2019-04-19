@@ -18,7 +18,13 @@
         <slot name="toolbarItems"></slot>
       </v-toolbar-items>
 
-      <v-btn class="hidden-md-and-up" flat icon @click="drawer = !drawer">
+      <v-btn
+        v-if="menu"
+        class="hidden-md-and-up"
+        flat
+        icon
+        @click="drawer = !drawer"
+      >
         <v-icon>menu</v-icon>
       </v-btn>
     </v-toolbar>
@@ -35,6 +41,9 @@
 
 <script>
 export default {
+  props: {
+    menu: Boolean
+  },
   data() {
     return {
       height: 60,
@@ -82,9 +91,5 @@ img {
   font-size: 0.8em;
   text-transform: uppercase;
   text-align: center;
-}
-
-.thin {
-  font-weight: 300;
 }
 </style>
