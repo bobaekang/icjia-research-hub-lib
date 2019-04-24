@@ -1,5 +1,5 @@
 <template>
-  <v-card class="mb-5">
+  <BaseCard :external="dataset.external">
     <v-card-title primary-title>
       <h2>
         <span class="small pl-2" style="color: #666">Datasets</span>
@@ -42,7 +42,9 @@
 
     <v-divider />
 
-    <v-container>
+    <v-container :class="dataset.external ? 'pt-1' : ''">
+      <ExternalContribution v-if="dataset.external" />
+
       <h2 class="mb-3 light">About this dataset</h2>
       <v-layout row wrap>
         <v-flex sm12 md6 lg4>
@@ -101,6 +103,20 @@
             </ul>
           </BasePropDisplay>
         </v-flex>
+
+        <v-flex x12>
+          <BaseInfoBlock v-if="dataset.funding">
+            <template v-slot:title>{{ "Funding acknowledgement" }}</template>
+            <template v-slot:text>{{ dataset.funding }}</template>
+          </BaseInfoBlock>
+
+          <BaseInfoBlock v-if="dataset.citation">
+            <template v-slot:title>{{ "Suggested citation" }}</template>
+            <template v-slot:text>
+              <span v-html="dataset.citation.text"></span>
+            </template>
+          </BaseInfoBlock>
+        </v-flex>
       </v-layout>
     </v-container>
 
@@ -119,7 +135,7 @@
       <v-container>
         <h2 class="mb-3 light">Related</h2>
 
-        <ul class="font-lato">
+        <ul class="font-lato small">
           <li v-for="(app, i) in dataset.apps" :key="`app${i}`">
             <router-link :to="app.slug | path('apps')">
               <template>{{ `[APP] ${app.title}` }}</template>
@@ -133,21 +149,27 @@
         </ul>
       </v-container>
     </template>
-  </v-card>
+  </BaseCard>
 </template>
 
 <script>
 import { allContentMixin, datasetMixin } from "@/mixins/contentMixin";
 import BaseButton from "@/components/BaseButton";
+import BaseCard from "@/components/BaseCard";
+import BaseInfoBlock from "@/components/BaseInfoBlock";
 import BasePropChip from "@/components/BasePropChip";
 import BasePropDisplay from "@/components/BasePropDisplay";
+import ExternalContribution from "@/components/ExternalContribution";
 
 export default {
   mixins: [allContentMixin, datasetMixin],
   components: {
     BaseButton,
+    BaseCard,
+    BaseInfoBlock,
     BasePropChip,
-    BasePropDisplay
+    BasePropDisplay,
+    ExternalContribution
   },
   props: {
     item: Object,

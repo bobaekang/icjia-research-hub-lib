@@ -1,5 +1,5 @@
 <template>
-  <v-card class="ma-3">
+  <BaseCard :external="article.external">
     <v-layout row>
       <v-img
         class="hidden-sm-and-down"
@@ -18,7 +18,11 @@
       </v-img>
       <v-layout column justify-space-between class="article-body">
         <div>
-          <v-container class="py-2">
+          <v-card-title :class="article.external ? 'pt-1 pb-2' : ''">
+            <v-flex xs12>
+              <ExternalContribution v-if="article.external" />
+            </v-flex>
+
             <v-layout row wrap>
               <BaseTitleDisplay :to="article.slug | path('articles')">
                 <template>{{ article.title }}</template>
@@ -30,7 +34,7 @@
                 </BasePropChip>
               </div>
             </v-layout>
-          </v-container>
+          </v-card-title>
 
           <v-divider />
 
@@ -70,12 +74,12 @@
         <v-card-actions>
           <v-spacer></v-spacer>
           <v-btn
-            v-if="article.summary"
-            @click="showSummary = !showSummary"
+            v-if="article.abstract"
+            @click="showAbstract = !showAbstract"
             flat
           >
-            <template>{{ "summary" }}</template>
-            <v-icon>{{ summaryIcon }}</v-icon>
+            <template>{{ "abstract" }}</template>
+            <v-icon>{{ abstractIcon }}</v-icon>
           </v-btn>
 
           <BaseButton :to="article.slug | path('articles')" icon="more_horiz">
@@ -84,42 +88,46 @@
         </v-card-actions>
 
         <v-slide-y-transition>
-          <v-card-text v-if="showSummary">{{ article.summary }}</v-card-text>
+          <v-card-text v-if="showAbstract">{{ article.abstract }}</v-card-text>
         </v-slide-y-transition>
       </v-layout>
     </v-layout>
-  </v-card>
+  </BaseCard>
 </template>
 
 <script>
 import { allContentMixin } from "@/mixins/contentMixin";
 import BaseButton from "@/components/BaseButton";
+import BaseCard from "@/components/BaseCard";
 import BasePropChip from "@/components/BasePropChip";
 import BasePropDisplay from "@/components/BasePropDisplay";
 import BaseTitleDisplay from "@/components/BaseTitleDisplay";
+import ExternalContribution from "@/components/ExternalContribution";
 
 export default {
   mixins: [allContentMixin],
   components: {
     BaseButton,
+    BaseCard,
     BasePropChip,
     BasePropDisplay,
-    BaseTitleDisplay
+    BaseTitleDisplay,
+    ExternalContribution
   },
   props: {
     item: Object
   },
   data() {
     return {
-      showSummary: false
+      showAbstract: false
     };
   },
   computed: {
     article() {
       return this.item;
     },
-    summaryIcon() {
-      return this.showSummary ? "keyboard_arrow_down" : "keyboard_arrow_up";
+    abstractIcon() {
+      return this.showAbstract ? "keyboard_arrow_down" : "keyboard_arrow_up";
     }
   }
 };

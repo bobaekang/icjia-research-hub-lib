@@ -1,5 +1,5 @@
 <template>
-  <v-card class="mb-5">
+  <BaseCard :view="true" :external="app.external">
     <v-card-title primary-title>
       <h2>
         <span class="small pl-2" style="color: #666">Apps</span>
@@ -39,8 +39,10 @@
         </v-img>
       </v-flex>
 
-      <v-flex>
-        <v-container>
+      <v-flex xs9>
+        <v-container :class="app.external ? 'pt-1' : ''">
+          <ExternalContribution v-if="app.external" />
+
           <h2 class="pb-3 light">About this app</h2>
           <BasePropDisplay name="Updated">
             <template>{{ app.date | formatDate }}</template>
@@ -78,6 +80,18 @@
           <BasePropDisplay name="Description">
             <template>{{ app.description }}</template>
           </BasePropDisplay>
+
+          <BaseInfoBlock v-if="app.funding">
+            <template v-slot:title>{{ "Funding acknowledgement" }}</template>
+            <template v-slot:text>{{ app.funding }}</template>
+          </BaseInfoBlock>
+
+          <BaseInfoBlock v-if="app.citation">
+            <template v-slot:title>{{ "Suggested citation" }}</template>
+            <template v-slot:text>
+              <span v-html="app.citation.text"></span>
+            </template>
+          </BaseInfoBlock>
         </v-container>
 
         <template v-if="hasRelated">
@@ -86,7 +100,7 @@
           <v-container>
             <h2 class="pb-3 light">Related</h2>
 
-            <ul class="font-lato">
+            <ul class="font-lato small">
               <li v-for="(article, i) in app.articles" :key="`article${i}`">
                 <router-link :to="article.slug | path('articles')">
                   <template>{{ `[ARTICLE] ${article.title}` }}</template>
@@ -102,21 +116,27 @@
         </template>
       </v-flex>
     </v-layout>
-  </v-card>
+  </BaseCard>
 </template>
 
 <script>
 import { allContentMixin } from "@/mixins/contentMixin";
 import BaseButton from "@/components/BaseButton";
+import BaseCard from "@/components/BaseCard";
 import BasePropChip from "@/components/BasePropChip";
 import BasePropDisplay from "@/components/BasePropDisplay";
+import ExternalContribution from "@/components/ExternalContribution";
+import BaseInfoBlock from "@/components/BaseInfoBlock";
 
 export default {
   mixins: [allContentMixin],
   components: {
     BaseButton,
+    BaseCard,
     BasePropChip,
-    BasePropDisplay
+    BasePropDisplay,
+    ExternalContribution,
+    BaseInfoBlock
   },
   props: {
     item: Object

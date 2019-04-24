@@ -1,6 +1,10 @@
 <template>
-  <v-card class="ma-3">
-    <v-card-title primary-title>
+  <BaseCard :external="dataset.external">
+    <v-card-title primary-title :class="dataset.external ? 'pt-1 pb-2' : ''">
+      <v-flex xs12>
+        <ExternalContribution v-if="dataset.external" />
+      </v-flex>
+
       <v-layout row wrap>
         <BaseTitleDisplay :to="dataset.slug | path('datasets')">
           <template>{{ dataset.title }}</template>
@@ -48,23 +52,27 @@
         <template>{{ "more" }}</template>
       </BaseButton>
     </v-container>
-  </v-card>
+  </BaseCard>
 </template>
 
 <script>
 import { allContentMixin, datasetMixin } from "@/mixins/contentMixin";
 import BaseButton from "@/components/BaseButton";
+import BaseCard from "@/components/BaseCard";
 import BasePropChip from "@/components/BasePropChip";
 import BasePropDisplay from "@/components/BasePropDisplay";
 import BaseTitleDisplay from "@/components/BaseTitleDisplay";
+import ExternalContribution from "@/components/ExternalContribution";
 
 export default {
   mixins: [allContentMixin, datasetMixin],
   components: {
     BaseButton,
+    BaseCard,
     BasePropChip,
     BasePropDisplay,
-    BaseTitleDisplay
+    BaseTitleDisplay,
+    ExternalContribution
   },
   props: {
     item: Object

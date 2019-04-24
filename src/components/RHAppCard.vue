@@ -1,5 +1,5 @@
 <template>
-  <v-card class="ma-3">
+  <BaseCard :external="app.external">
     <v-img
       height="200px"
       :src="app.image"
@@ -10,7 +10,11 @@
       </v-layout>
     </v-img>
 
-    <v-card-title primary-title>
+    <v-card-title primary-title :class="app.external ? 'pt-1 pb-2' : ''">
+      <v-flex xs12>
+        <ExternalContribution v-if="app.external" />
+      </v-flex>
+
       <v-layout row wrap>
         <BaseTitleDisplay :to="app.slug | path('apps')">
           <template>{{ app.title }}</template>
@@ -56,23 +60,27 @@
         <template>{{ "more" }}</template>
       </BaseButton>
     </v-card-actions>
-  </v-card>
+  </BaseCard>
 </template>
 
 <script>
 import { allContentMixin } from "@/mixins/contentMixin";
 import BaseButton from "@/components/BaseButton";
+import BaseCard from "@/components/BaseCard";
 import BasePropChip from "@/components/BasePropChip";
 import BasePropDisplay from "@/components/BasePropDisplay";
 import BaseTitleDisplay from "@/components/BaseTitleDisplay";
+import ExternalContribution from "@/components/ExternalContribution";
 
 export default {
   mixins: [allContentMixin],
   components: {
     BaseButton,
+    BaseCard,
     BasePropChip,
     BasePropDisplay,
-    BaseTitleDisplay
+    BaseTitleDisplay,
+    ExternalContribution
   },
   props: {
     item: Object

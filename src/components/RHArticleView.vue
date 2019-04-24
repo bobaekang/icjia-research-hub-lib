@@ -66,10 +66,12 @@
               <BaseButton to="/articles">back</BaseButton>
             </v-layout>
 
+            <ExternalContribution v-if="article.external" />
+
             <h1 class="article-title">{{ article.title }}</h1>
 
-            <div class="article-summary greycolor font-lato my-3">
-              <template>{{ article.summary }}</template>
+            <div class="article-abstract greycolor font-lato my-3">
+              <template>{{ article.abstract }}</template>
             </div>
 
             <div class="mb-3">
@@ -125,9 +127,38 @@
             <v-divider />
 
             <div
-              ref="article-body"
               class="article-body"
-              v-html="articleBody"
+              v-html="articleBody.main"
+              v-scroll="onScroll"
+            />
+
+            <div class="my-5">
+              <BaseInfoBlock v-if="article.funding" :large="true">
+                <template v-slot:title>{{
+                  "Funding acknowledgement"
+                }}</template>
+                <template v-slot:text>{{ article.funding }}</template>
+              </BaseInfoBlock>
+
+              <BaseInfoBlock v-if="article.citation" :large="true">
+                <template v-slot:title>{{ "Suggested citation" }}</template>
+                <template v-slot:text>
+                  <span v-html="article.citation.text"></span>
+
+                  <template v-if="article.citation.doi">
+                    <a :href="article.citation.doi">{{
+                      " " + article.citation.doi
+                    }}</a>
+                  </template>
+                </template>
+              </BaseInfoBlock>
+            </div>
+
+            <v-divider></v-divider>
+
+            <div
+              class="article-body"
+              v-html="articleBody.footer"
               v-scroll="onScroll"
             />
           </v-flex>
@@ -139,10 +170,12 @@
 
 <script>
 import { allContentMixin } from "@/mixins/contentMixin";
+import ArticleSocialSharing from "@/components/ArticleSocialSharing";
 import ArticleTOC from "@/components/ArticleTOC";
 import BaseButton from "@/components/BaseButton";
+import BaseInfoBlock from "@/components/BaseInfoBlock";
 import BasePropChip from "@/components/BasePropChip";
-import ArticleSocialSharing from "@/components/ArticleSocialSharing";
+import ExternalContribution from "@/components/ExternalContribution";
 
 const mdOpts = {
   html: true,
@@ -167,10 +200,12 @@ const md = require("markdown-it")(mdOpts)
 export default {
   mixins: [allContentMixin],
   components: {
+    ArticleSocialSharing,
     ArticleTOC,
     BaseButton,
+    BaseInfoBlock,
     BasePropChip,
-    ArticleSocialSharing
+    ExternalContribution
   },
   props: {
     item: Object
@@ -205,7 +240,12 @@ export default {
             markdown += `\n\n[${image.title}]: ${image.src}`;
           });
         }
-        return md.render(markdown);
+        const spliter = '<hr class="footnotes-sep">';
+        const body = md.render(markdown).split(spliter);
+        return {
+          main: body[0],
+          footer: body[1]
+        };
       } else return "";
     },
     headings() {
@@ -270,6 +310,7 @@ export default {
 a {
   white-space: normal;
 }
+
 .article-type {
   color: grey;
 }
@@ -284,7 +325,7 @@ a {
   line-height: 1.3;
 }
 
-.article-summary {
+.article-abstract {
   font-weight: 300;
   font-size: 20px;
 }
