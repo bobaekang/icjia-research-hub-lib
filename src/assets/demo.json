@@ -14,9 +14,7 @@
     ],
     "description": "This is a dummy Apps item prepared for demonstration purposes.",
     "url": "",
-    "citation": {
-      "text": "Doe, J. (2019). <em>My Dummy app.</em> Chicago, IL: Illinois Criminal Justice Information Authority."
-    },
+    "citation": "Doe, J. (2019). <em>My Dummy app.</em> Chicago, IL: Illinois Criminal Justice Information Authority.",
     "funding": "This project was supported by Grant #00-XX-XX-0000, awarded to the Illinois Criminal Justice Information Authority by the U.S. Department of Justice Office of Justice Programs’ Bureau of Justice Assistance. Points of view or opinions contained within this product are those of the authors and do not necessarily represent the official position or policies of the U.S. Department of Justice.",
     "articles": [
       {
@@ -38,7 +36,8 @@
     "type": ["Reports"],
     "categories": ["courts"],
     "tags": ["tag A", "tag B"],
-    "splash": "https://loremflickr.com/640/360",
+    "splash": "https://loremflickr.com/640/640",
+    "thumbnail": "https://loremflickr.com/640/640",
     "images": [
       {
         "title": "figure1",
@@ -57,10 +56,8 @@
         "slug": ""
       }
     ],
-    "citation": {
-      "text": "Doe, J. & Roe, R. (2019). <em>My Dummy Article.</em> Chicago, IL: Illinois Criminal Justice Information Authority.",
-      "doi": "https://dx.doi.org/"
-    },
+    "citation": "Doe, J. & Roe, R. (2019). <em>My Dummy Article.</em> Chicago, IL: Illinois Criminal Justice Information Authority.",
+    "doi": "https://dx.doi.org/",
     "funding": "This project was supported by Grant #00-XX-XX-0000, awarded to the Illinois Criminal Justice Information Authority by the U.S. Department of Justice Office of Justice Programs’ Bureau of Justice Assistance. Points of view or opinions contained within this document are those of the authors and do not necessarily represent the official position or policies of the U.S. Department of Justice.",
     "apps": [
       {
@@ -116,9 +113,7 @@
         "values": "f"
       }
     ],
-    "citation": {
-      "text": "Illinois Criminal Justice Information Authority. (2019). <em>My Dummy Dataset.</em> Chicago, IL: Illinois Criminal Justice Information Authority."
-    },
+    "citation": "Illinois Criminal Justice Information Authority. (2019). <em>My Dummy Dataset.</em> Chicago, IL: Illinois Criminal Justice Information Authority.",
     "funding": "This project was supported by Grant #00-XX-XX-0000, awarded to the Illinois Criminal Justice Information Authority by the U.S. Department of Justice Office of Justice Programs’ Bureau of Justice Assistance. Points of view or opinions contained within this product are those of the authors and do not necessarily represent the official position or policies of the U.S. Department of Justice.",
     "apps": [
       {

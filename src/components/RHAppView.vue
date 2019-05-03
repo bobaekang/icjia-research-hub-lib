@@ -82,14 +82,14 @@
           </BasePropDisplay>
 
           <BaseInfoBlock v-if="app.funding">
-            <template v-slot:title>{{ "Funding acknowledgement" }}</template>
+            <template v-slot:title>{{ "Funding acknowledgment" }}</template>
             <template v-slot:text>{{ app.funding }}</template>
           </BaseInfoBlock>
 
           <BaseInfoBlock v-if="app.citation">
             <template v-slot:title>{{ "Suggested citation" }}</template>
             <template v-slot:text>
-              <span v-html="app.citation.text"></span>
+              <span v-html="app.citation"></span>
             </template>
           </BaseInfoBlock>
         </v-container>

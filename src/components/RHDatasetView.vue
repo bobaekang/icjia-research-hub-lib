@@ -106,14 +106,14 @@
 
         <v-flex x12>
           <BaseInfoBlock v-if="dataset.funding">
-            <template v-slot:title>{{ "Funding acknowledgement" }}</template>
+            <template v-slot:title>{{ "Funding acknowledgment" }}</template>
             <template v-slot:text>{{ dataset.funding }}</template>
           </BaseInfoBlock>
 
           <BaseInfoBlock v-if="dataset.citation">
             <template v-slot:title>{{ "Suggested citation" }}</template>
             <template v-slot:text>
-              <span v-html="dataset.citation.text"></span>
+              <span v-html="dataset.citation"></span>
             </template>
           </BaseInfoBlock>
         </v-flex>

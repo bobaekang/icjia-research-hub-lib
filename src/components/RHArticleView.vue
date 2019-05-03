@@ -134,21 +134,17 @@
 
             <div class="my-5">
               <BaseInfoBlock v-if="article.funding" :large="true">
-                <template v-slot:title>{{
-                  "Funding acknowledgement"
-                }}</template>
+                <template v-slot:title>{{ "Funding acknowledgment" }}</template>
                 <template v-slot:text>{{ article.funding }}</template>
               </BaseInfoBlock>
 
               <BaseInfoBlock v-if="article.citation" :large="true">
                 <template v-slot:title>{{ "Suggested citation" }}</template>
                 <template v-slot:text>
-                  <span v-html="article.citation.text"></span>
+                  <span v-html="article.citation"></span>
 
-                  <template v-if="article.citation.doi">
-                    <a :href="article.citation.doi">{{
-                      " " + article.citation.doi
-                    }}</a>
+                  <template v-if="article.doi">
+                    <a :href="article.doi">{{" " + article.doi}}</a>
                   </template>
                 </template>
               </BaseInfoBlock>

@@ -3,8 +3,9 @@
     <v-layout row>
       <v-img
         class="hidden-sm-and-down"
-        :src="article.splash"
+        :src="article.thumbnail"
         lazy-src="https://via.placeholder.com/1/DDDDDD"
+        max-width="300px"
       >
         <v-layout
           slot="placeholder"
