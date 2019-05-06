@@ -107,7 +107,7 @@
                 <h2 class="mb-3 light">Related</h2>
 
                 <ul class="font-lato">
-                  <li v-for="(app, i) in article.apps" :key="`article${i}`">
+                  <li v-for="(app, i) in article.apps" :key="`app${i}`">
                     <router-link :to="app.slug | path('apps')">
                       <template>{{ `[APP] ${app.title}` }}</template>
                     </router-link>
