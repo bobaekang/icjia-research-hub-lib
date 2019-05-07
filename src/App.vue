@@ -36,7 +36,11 @@
 
     <template v-if="view">
       <v-flex v-if="contentType === 'article'" xs12>
-        <RHArticleView :item="article" :key="`articleView${componentKey}`" />
+        <RHArticleView
+          :item="article"
+          :key="`articleView${componentKey}`"
+          @tag-click="onTagClick($event)"
+        />
       </v-flex>
 
       <v-container v-else>
@@ -46,11 +50,13 @@
               v-if="contentType === 'app'"
               :item="app"
               :key="`appView${componentKey}`"
+              @tag-click="onTagClick($event)"
             />
             <RHDatasetView
               v-if="contentType === 'dataset'"
               :item="dataset"
               :key="`datasetView${componentKey}`"
+              @tag-click="onTagClick($event)"
             />
           </v-flex>
         </v-layout>
@@ -62,7 +68,11 @@
         <v-flex xs12 sm10 xl8>
           <v-layout v-if="contentType === 'app'" row wrap justify-center>
             <v-flex xs12 sm6 lg4>
-              <RHAppCard :item="app" :key="`appCard${componentKey}`" />
+              <RHAppCard
+                :item="app"
+                :key="`appCard${componentKey}`"
+                @tag-click="onTagClick($event)"
+              />
             </v-flex>
           </v-layout>
 
@@ -70,6 +80,7 @@
             v-if="contentType === 'article'"
             :item="article"
             :key="`articleCard${componentKey}`"
+            @tag-click="onTagClick($event)"
           />
 
           <v-layout v-if="contentType === 'dataset'" row wrap justify-center>
@@ -77,6 +88,7 @@
               <RHDatasetCard
                 :item="dataset"
                 :key="`datasetCard${componentKey}`"
+                @tag-click="onTagClick($event)"
               />
             </v-flex>
           </v-layout>
@@ -139,6 +151,9 @@ export default {
   methods: {
     rerender() {
       this.componentKey += 1;
+    },
+    onTagClick(x) {
+      alert(x);
     }
   }
 };
