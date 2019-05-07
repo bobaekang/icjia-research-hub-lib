@@ -65,7 +65,7 @@ export default {
       return `${this.height}px`;
     },
     logoHpixel() {
-      return `${this.height * 0.9}px`;
+      return `${this.height * 0.6}px`;
     }
   }
 };
@@ -74,6 +74,7 @@ export default {
 <style scoped>
 a {
   text-decoration: none;
+  line-height: 1;
   color: rgba(0, 0, 0, 0.87);
 }
 
