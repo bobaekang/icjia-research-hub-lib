@@ -454,6 +454,17 @@ module.exports = function (Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCE
 
 /***/ }),
 
+/***/ "024d":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_RHBaseToolbar_vue_vue_type_style_index_0_id_c89c356c_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("9409");
+/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_RHBaseToolbar_vue_vue_type_style_index_0_id_c89c356c_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_RHBaseToolbar_vue_vue_type_style_index_0_id_c89c356c_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* unused harmony reexport * */
+ /* unused harmony default export */ var _unused_webpack_default_export = (_node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_RHBaseToolbar_vue_vue_type_style_index_0_id_c89c356c_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
 /***/ "02f4":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8204,6 +8215,13 @@ module.exports = function image(state, silent) {
 
 /***/ }),
 
+/***/ "9409":
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
 /***/ "96cf":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10904,17 +10922,6 @@ try {
 
 module.exports = g;
 
-
-/***/ }),
-
-/***/ "c99c":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_RHBaseToolbar_vue_vue_type_style_index_0_id_bed35360_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("e39c");
-/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_RHBaseToolbar_vue_vue_type_style_index_0_id_bed35360_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_RHBaseToolbar_vue_vue_type_style_index_0_id_bed35360_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
-/* unused harmony reexport * */
- /* unused harmony default export */ var _unused_webpack_default_export = (_node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_RHBaseToolbar_vue_vue_type_style_index_0_id_bed35360_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 
@@ -38015,13 +38022,6 @@ module.exports = [
 
 /***/ }),
 
-/***/ "e39c":
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
-
-/***/ }),
-
 /***/ "e4ae":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -40602,12 +40602,12 @@ var RHAuthorView_component = normalizeComponent(
 )
 
 /* harmony default export */ var RHAuthorView = (RHAuthorView_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"6a83156a-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/RHBaseToolbar.vue?vue&type=template&id=bed35360&scoped=true&
-var RHBaseToolbarvue_type_template_id_bed35360_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('v-toolbar',{attrs:{"id":"toolbar","height":_vm.hpixel,"fixed":"","scroll-off-screen":""}},[_c('a',{staticClass:"hidden-xs-only",attrs:{"href":_vm.logo.href,"target":"_blank"}},[_c('img',{attrs:{"src":_vm.logo.url,"height":_vm.logoHpixel,"alt":"logo"}})]),_c('router-link',{attrs:{"to":"/"}},[_c('v-toolbar-title',[[_vm._v(_vm._s(_vm.titleUpper))],_vm._t("titleExtra")],2)],1),_c('v-spacer'),_c('v-toolbar-items',{staticClass:"hidden-sm-and-down"},[_vm._t("toolbarItems")],2),(_vm.menu)?_c('v-btn',{staticClass:"hidden-md-and-up",attrs:{"flat":"","icon":""},on:{"click":function($event){_vm.drawer = !_vm.drawer}}},[_c('v-icon',[_vm._v("menu")])],1):_vm._e()],1),_c('div',{style:({ height: _vm.hpixel, backgroundColor: '#466c8c' })}),_c('v-navigation-drawer',{attrs:{"temporary":"","right":"","app":"","width":"175"},model:{value:(_vm.drawer),callback:function ($$v) {_vm.drawer=$$v},expression:"drawer"}},[_c('v-list',{staticClass:"slot"},[_vm._t("toolbarDrawerItems")],2)],1)],1)}
-var RHBaseToolbarvue_type_template_id_bed35360_scoped_true_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"6a83156a-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/RHBaseToolbar.vue?vue&type=template&id=c89c356c&scoped=true&
+var RHBaseToolbarvue_type_template_id_c89c356c_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('v-toolbar',{attrs:{"id":"toolbar","height":_vm.hpixel,"fixed":"","scroll-off-screen":""}},[_c('a',{staticClass:"hidden-xs-only",attrs:{"href":_vm.logo.href,"target":"_blank"}},[_c('img',{attrs:{"src":_vm.logo.url,"height":_vm.logoHpixel,"alt":"logo"}})]),_c('router-link',{attrs:{"to":"/"}},[_c('v-toolbar-title',[[_vm._v(_vm._s(_vm.titleUpper))],_vm._t("titleExtra")],2)],1),_c('v-spacer'),_c('v-toolbar-items',{staticClass:"hidden-sm-and-down"},[_vm._t("toolbarItems")],2),(_vm.menu)?_c('v-btn',{staticClass:"hidden-md-and-up",attrs:{"flat":"","icon":""},on:{"click":function($event){_vm.drawer = !_vm.drawer}}},[_c('v-icon',[_vm._v("menu")])],1):_vm._e()],1),_c('div',{style:({ height: _vm.hpixel, backgroundColor: '#466c8c' })}),_c('v-navigation-drawer',{attrs:{"temporary":"","right":"","app":"","width":"175"},model:{value:(_vm.drawer),callback:function ($$v) {_vm.drawer=$$v},expression:"drawer"}},[_c('v-list',{staticClass:"slot"},[_vm._t("toolbarDrawerItems")],2)],1)],1)}
+var RHBaseToolbarvue_type_template_id_c89c356c_scoped_true_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/RHBaseToolbar.vue?vue&type=template&id=bed35360&scoped=true&
+// CONCATENATED MODULE: ./src/components/RHBaseToolbar.vue?vue&type=template&id=c89c356c&scoped=true&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/RHBaseToolbar.vue?vue&type=script&lang=js&
 //
@@ -40675,14 +40675,14 @@ var RHBaseToolbarvue_type_template_id_bed35360_scoped_true_staticRenderFns = []
       return "".concat(this.height, "px");
     },
     logoHpixel: function logoHpixel() {
-      return "".concat(this.height * 0.9, "px");
+      return "".concat(this.height * 0.6, "px");
     }
   }
 });
 // CONCATENATED MODULE: ./src/components/RHBaseToolbar.vue?vue&type=script&lang=js&
  /* harmony default export */ var components_RHBaseToolbarvue_type_script_lang_js_ = (RHBaseToolbarvue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./src/components/RHBaseToolbar.vue?vue&type=style&index=0&id=bed35360&scoped=true&lang=css&
-var RHBaseToolbarvue_type_style_index_0_id_bed35360_scoped_true_lang_css_ = __webpack_require__("c99c");
+// EXTERNAL MODULE: ./src/components/RHBaseToolbar.vue?vue&type=style&index=0&id=c89c356c&scoped=true&lang=css&
+var RHBaseToolbarvue_type_style_index_0_id_c89c356c_scoped_true_lang_css_ = __webpack_require__("024d");
 
 // CONCATENATED MODULE: ./src/components/RHBaseToolbar.vue
 
@@ -40695,11 +40695,11 @@ var RHBaseToolbarvue_type_style_index_0_id_bed35360_scoped_true_lang_css_ = __we
 
 var RHBaseToolbar_component = normalizeComponent(
   components_RHBaseToolbarvue_type_script_lang_js_,
-  RHBaseToolbarvue_type_template_id_bed35360_scoped_true_render,
-  RHBaseToolbarvue_type_template_id_bed35360_scoped_true_staticRenderFns,
+  RHBaseToolbarvue_type_template_id_c89c356c_scoped_true_render,
+  RHBaseToolbarvue_type_template_id_c89c356c_scoped_true_staticRenderFns,
   false,
   null,
-  "bed35360",
+  "c89c356c",
   null
   
 )
