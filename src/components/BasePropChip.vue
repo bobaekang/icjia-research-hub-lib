@@ -1,7 +1,4 @@
 <template>
-  <!-- <v-chip disabled small text-color="#333" class="font-lato uppercase">
-    <slot></slot>
-  </v-chip> -->
   <v-btn
     class="chip"
     small
@@ -12,14 +9,6 @@
     <slot></slot>
   </v-btn>
 </template>
-
-<script>
-export default {
-  props: {
-    event: Function
-  }
-};
-</script>
 
 <style scoped>
 .chip {
