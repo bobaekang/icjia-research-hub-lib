@@ -9,6 +9,7 @@ import RHAppView from "./AppView.vue";
 import RHArticleCard from "./ArticleCard.vue";
 import RHArticleView from "./ArticleView.vue";
 import RHAuthorView from "./AuthorView.vue";
+import RHBasePropChip from "./BasePropChip.vue";
 import RHBaseToolbar from "./BaseToolbar.vue";
 import RHDatasetCard from "./DatasetCard.vue";
 import RHDatasetView from "./DatasetView.vue";
@@ -23,6 +24,7 @@ const Components = {
   RHArticleCard,
   RHArticleView,
   RHAuthorView,
+  RHBasePropChip,
   RHBaseToolbar,
   RHDatasetCard,
   RHDatasetView,
