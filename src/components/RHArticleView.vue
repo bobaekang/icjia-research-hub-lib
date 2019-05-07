@@ -57,7 +57,11 @@
                 <template>{{ "&nbsp;&nbsp;" }}</template>
 
                 <template v-if="article.tags">
-                  <BasePropChip v-for="tag of article.tags" :key="tag">
+                  <BasePropChip
+                    v-for="tag of article.tags"
+                    :key="tag"
+                    @chip-click="$emit('tag-click', $event)"
+                  >
                     <template>{{ tag }}</template>
                   </BasePropChip>
                 </template>
@@ -144,7 +148,7 @@
                   <span v-html="article.citation"></span>
 
                   <template v-if="article.doi">
-                    <a :href="article.doi">{{" " + article.doi}}</a>
+                    <a :href="article.doi">{{ " " + article.doi }}</a>
                   </template>
                 </template>
               </BaseInfoBlock>

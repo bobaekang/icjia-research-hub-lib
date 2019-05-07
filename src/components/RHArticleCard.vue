@@ -30,7 +30,11 @@
               </BaseTitleDisplay>
 
               <div v-if="article.tags">
-                <BasePropChip v-for="tag of article.tags" :key="tag">
+                <BasePropChip
+                  v-for="tag of article.tags"
+                  :key="tag"
+                  @chip-click="$emit('tag-click', $event)"
+                >
                   <template>{{ tag }}</template>
                 </BasePropChip>
               </div>
@@ -116,7 +120,8 @@ export default {
     ExternalContribution
   },
   props: {
-    item: Object
+    item: Object,
+    onTagClick: Function
   },
   data() {
     return {

@@ -74,7 +74,11 @@
           </BasePropDisplay>
 
           <BasePropDisplay v-if="dataset.tags" name="Tags">
-            <BasePropChip v-for="tag in dataset.tags" :key="tag">
+            <BasePropChip
+              v-for="tag in dataset.tags"
+              :key="tag"
+              @chip-click="$emit('tag-click', $event)"
+            >
               <template>{{ tag }}</template>
             </BasePropChip>
           </BasePropDisplay>

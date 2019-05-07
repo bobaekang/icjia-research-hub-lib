@@ -11,7 +11,11 @@
         </BaseTitleDisplay>
 
         <div v-if="dataset.tags">
-          <BasePropChip v-for="tag in dataset.tags" :key="tag">
+          <BasePropChip
+            v-for="tag in dataset.tags"
+            :key="tag"
+            @chip-click="$emit('tag-click', $event)"
+          >
             <template>{{ tag }}</template>
           </BasePropChip>
         </div>
