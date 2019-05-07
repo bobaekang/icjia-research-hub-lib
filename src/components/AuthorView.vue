@@ -23,7 +23,7 @@
         <div class="my-3">
           <h2 class="mb-3 light">Articles by this author</h2>
           <v-flex v-for="article in articles" :key="article.id" class="mb-3">
-            <RHArticleCard :item="article" />
+            <ArticleCard :item="article" />
           </v-flex>
         </div>
       </template>
@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import RHArticleCard from "@/components/RHArticleCard";
+import ArticleCard from "@/components/ArticleCard";
 
 function sortByDate(items) {
   return items.sort((a, b) => {
@@ -44,7 +44,7 @@ function sortByDate(items) {
 
 export default {
   components: {
-    RHArticleCard
+    ArticleCard
   },
   props: {
     item: Object,

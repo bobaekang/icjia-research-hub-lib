@@ -4,15 +4,15 @@ import SocialSharing from "vue-social-sharing";
 import "vuetify/dist/vuetify.min.css";
 import "@/assets/style.css";
 
-import RHAppCard from "./RHAppCard.vue";
-import RHAppView from "./RHAppView.vue";
-import RHArticleCard from "./RHArticleCard.vue";
-import RHArticleView from "./RHArticleView.vue";
-import RHAuthorView from "./RHAuthorView.vue";
-import RHBaseToolbar from "./RHBaseToolbar.vue";
-import RHDatasetCard from "./RHDatasetCard.vue";
-import RHDatasetView from "./RHDatasetView.vue";
-import RHFooter from "./RHFooter.vue";
+import RHAppCard from "./AppCard.vue";
+import RHAppView from "./AppView.vue";
+import RHArticleCard from "./ArticleCard.vue";
+import RHArticleView from "./ArticleView.vue";
+import RHAuthorView from "./AuthorView.vue";
+import RHBaseToolbar from "./BaseToolbar.vue";
+import RHDatasetCard from "./DatasetCard.vue";
+import RHDatasetView from "./DatasetView.vue";
+import RHFooter from "./Footer.vue";
 
 Vue.use(Vuetify);
 Vue.use(SocialSharing);

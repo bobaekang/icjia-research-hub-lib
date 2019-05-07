@@ -6,15 +6,15 @@ import "vuetify/dist/vuetify.min.css";
 import "@/assets/style.css";
 
 import App from "./App.vue";
-import RHAppCard from "@/components/RHAppCard.vue";
-import RHAppView from "@/components/RHAppView.vue";
-import RHArticleCard from "@/components/RHArticleCard.vue";
-import RHArticleView from "@/components/RHArticleView.vue";
-import RHAuthorView from "@/components/RHAuthorView.vue";
-import RHBaseToolbar from "@/components/RHBaseToolbar.vue";
-import RHDatasetCard from "@/components/RHDatasetCard.vue";
-import RHDatasetView from "@/components/RHDatasetView.vue";
-import RHFooter from "@/components/RHFooter.vue";
+import RHAppCard from "@/components/AppCard.vue";
+import RHAppView from "@/components/AppView.vue";
+import RHArticleCard from "@/components/ArticleCard.vue";
+import RHArticleView from "@/components/ArticleView.vue";
+import RHAuthorView from "@/components/AuthorView.vue";
+import RHBaseToolbar from "@/components/BaseToolbar.vue";
+import RHDatasetCard from "@/components/DatasetCard.vue";
+import RHDatasetView from "@/components/DatasetView.vue";
+import RHFooter from "@/components/Footer.vue";
 
 Vue.config.productionTip = false;
 Vue.use(Router);
