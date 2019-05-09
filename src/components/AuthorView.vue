@@ -65,8 +65,7 @@ export default {
     this.articleIds = this.item.articles;
     Promise.all(
       this.item.articles.map(async el => {
-        const res = await this.getArticleInfo(el._id);
-        return res.data.data.article;
+        return await this.getArticleInfo(el._id);
       })
     ).then(articles => {
       this.articles = sortByDate(articles);
@@ -77,8 +76,7 @@ export default {
       this.articleIds = this.item.articles;
       Promise.all(
         this.item.articles.map(async el => {
-          const res = await this.getArticleInfo(el._id);
-          return res.data.data.article;
+          return await this.getArticleInfo(el._id);
         })
       ).then(articles => {
         this.articles = sortByDate(articles);
