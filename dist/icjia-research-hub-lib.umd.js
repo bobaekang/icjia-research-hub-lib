@@ -40418,12 +40418,12 @@ var ArticleView_component = normalizeComponent(
 )
 
 /* harmony default export */ var ArticleView = (ArticleView_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"6a83156a-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/AuthorView.vue?vue&type=template&id=1ba1954e&
-var AuthorViewvue_type_template_id_1ba1954e_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('v-card',{staticClass:"mb-5"},[_c('v-card-title',{attrs:{"primary-title":""}},[_c('h2',[_c('span',{staticClass:"small pl-2",staticStyle:{"color":"#666"}},[_vm._v("Authors")]),_c('v-icon',[_vm._v("chevron_right")]),[_vm._v(_vm._s(_vm.author.title))]],2)]),_c('v-divider'),_c('v-container',[_c('div',{staticClass:"mb-3"},[_c('h2',{staticClass:"mb-3 light"},[_vm._v("About this author")]),(_vm.author.description)?_c('p',[_vm._v(_vm._s(_vm.author.description))]):_c('p',{staticClass:"italic"},[_vm._v("(No description.)")])]),(_vm.author.articles.length > 0)?[_c('v-divider'),_c('div',{staticClass:"my-3"},[_c('h2',{staticClass:"mb-3 light"},[_vm._v("Articles by this author")]),_vm._l((_vm.articles),function(article){return _c('v-flex',{key:article.id,staticClass:"mb-3"},[_c('ArticleCard',{attrs:{"item":article}})],1)})],2)]:_vm._e()],2)],1)}
-var AuthorViewvue_type_template_id_1ba1954e_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"6a83156a-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/AuthorView.vue?vue&type=template&id=2367d099&
+var AuthorViewvue_type_template_id_2367d099_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('v-card',{staticClass:"mb-5"},[_c('v-card-title',{attrs:{"primary-title":""}},[_c('h2',[_c('span',{staticClass:"small pl-2",staticStyle:{"color":"#666"}},[_vm._v("Authors")]),_c('v-icon',[_vm._v("chevron_right")]),[_vm._v(_vm._s(_vm.author.title))]],2)]),_c('v-divider'),_c('v-container',[_c('div',{staticClass:"mb-3"},[_c('h2',{staticClass:"mb-3 light"},[_vm._v("About this author")]),(_vm.author.description)?_c('p',[_vm._v(_vm._s(_vm.author.description))]):_c('p',{staticClass:"italic"},[_vm._v("(No description.)")])]),(_vm.author.articles.length > 0)?[_c('v-divider'),_c('div',{staticClass:"my-3"},[_c('h2',{staticClass:"mb-3 light"},[_vm._v("Articles by this author")]),_vm._l((_vm.articles),function(article){return _c('v-flex',{key:article.id,staticClass:"mb-3"},[_c('ArticleCard',{attrs:{"item":article}})],1)})],2)]:_vm._e()],2)],1)}
+var AuthorViewvue_type_template_id_2367d099_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/AuthorView.vue?vue&type=template&id=1ba1954e&
+// CONCATENATED MODULE: ./src/components/AuthorView.vue?vue&type=template&id=2367d099&
 
 // EXTERNAL MODULE: ./node_modules/regenerator-runtime/runtime.js
 var runtime = __webpack_require__("96cf");
@@ -40560,7 +40560,6 @@ function sortByDate(items) {
       var _ref = _asyncToGenerator(
       /*#__PURE__*/
       regeneratorRuntime.mark(function _callee(el) {
-        var res;
         return regeneratorRuntime.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
@@ -40569,10 +40568,9 @@ function sortByDate(items) {
                 return _this.getArticleInfo(el._id);
 
               case 2:
-                res = _context.sent;
-                return _context.abrupt("return", res.data.data.article);
+                return _context.abrupt("return", _context.sent);
 
-              case 4:
+              case 3:
               case "end":
                 return _context.stop();
             }
@@ -40599,7 +40597,6 @@ function sortByDate(items) {
         var _ref2 = _asyncToGenerator(
         /*#__PURE__*/
         regeneratorRuntime.mark(function _callee2(el) {
-          var res;
           return regeneratorRuntime.wrap(function _callee2$(_context2) {
             while (1) {
               switch (_context2.prev = _context2.next) {
@@ -40608,10 +40605,9 @@ function sortByDate(items) {
                   return _this2.getArticleInfo(el._id);
 
                 case 2:
-                  res = _context2.sent;
-                  return _context2.abrupt("return", res.data.data.article);
+                  return _context2.abrupt("return", _context2.sent);
 
-                case 4:
+                case 3:
                 case "end":
                   return _context2.stop();
               }
@@ -40640,8 +40636,8 @@ function sortByDate(items) {
 
 var AuthorView_component = normalizeComponent(
   components_AuthorViewvue_type_script_lang_js_,
-  AuthorViewvue_type_template_id_1ba1954e_render,
-  AuthorViewvue_type_template_id_1ba1954e_staticRenderFns,
+  AuthorViewvue_type_template_id_2367d099_render,
+  AuthorViewvue_type_template_id_2367d099_staticRenderFns,
   false,
   null,
   null,
