@@ -1,8 +1,16 @@
 <template>
   <div>
     <v-toolbar id="toolbar" :height="hpixel" fixed scroll-off-screen>
-      <a class="hidden-xs-only" :href="logo.href" target="_blank">
-        <img :src="logo.url" :height="logoHpixel" alt="logo" />
+      <a
+        class="hidden-xs-only"
+        href="http://www.icjia.state.il.us"
+        target="_blank"
+      >
+        <img
+          src="@/assets/logo-icjia-small-blue-3.png"
+          :height="logoHpixel"
+          alt="logo"
+        />
       </a>
 
       <router-link to="/">
@@ -49,11 +57,6 @@ export default {
       height: 60,
       title: "Research Hub",
       views: ["about", "apps", "articles", "datasets"],
-      logo: {
-        url:
-          "http://www.icjia.state.il.us/_themes/icjia/img/logo-icjia-small-blue-3.png",
-        href: "http://www.icjia.state.il.us"
-      },
       drawer: null
     };
   },
