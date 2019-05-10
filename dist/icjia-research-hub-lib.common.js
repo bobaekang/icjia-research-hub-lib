@@ -487,6 +487,17 @@ module.exports = function (S, index, unicode) {
 
 /***/ }),
 
+/***/ "061f":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_vuetify_loader_lib_loader_js_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ArticleView_vue_vue_type_style_index_0_id_166b2649_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("650b");
+/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_vuetify_loader_lib_loader_js_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ArticleView_vue_vue_type_style_index_0_id_166b2649_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_vuetify_loader_lib_loader_js_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ArticleView_vue_vue_type_style_index_0_id_166b2649_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* unused harmony reexport * */
+ /* unused harmony default export */ var _unused_webpack_default_export = (_node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_vuetify_loader_lib_loader_js_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ArticleView_vue_vue_type_style_index_0_id_166b2649_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
 /***/ "0758":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -558,13 +569,6 @@ module.exports = function (it, key) {
   return hasOwnProperty.call(it, key);
 };
 
-
-/***/ }),
-
-/***/ "07e6":
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
 
 /***/ }),
 
@@ -5303,392 +5307,6 @@ module.exports = patchedExec;
 
 /***/ }),
 
-/***/ "5299":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/*!
- * vue-social-sharing v2.4.3 
- * (c) 2019 nicolasbeauvais
- * Released under the MIT License.
- */
-
-
-function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
-
-var Vue = _interopDefault(__webpack_require__("8bbf"));
-
-var SocialSharingNetwork = {
-  functional: true,
-
-  props: {
-    network: {
-      type: String,
-      default: ''
-    }
-  },
-
-  render: function (createElement, context) {
-    var network = context.parent._data.baseNetworks[context.props.network];
-
-    if (!network) {
-      return console.warn(("Network " + (context.props.network) + " does not exist"));
-    }
-
-    return createElement(context.parent.networkTag, {
-      staticClass: context.data.staticClass || null,
-      staticStyle: context.data.staticStyle || null,
-      class: context.data.class || null,
-      style: context.data.style || null,
-      attrs: {
-        id: context.data.attrs.id || null,
-        'data-link': network.type === 'popup'
-          ? '#share-' + context.props.network
-          : context.parent.createSharingUrl(context.props.network),
-        'data-action': network.type === 'popup' ? null : network.action
-      },
-      on: {
-        click: network.type === 'popup' ? function () {
-          context.parent.share(context.props.network);
-        } : function () {
-          context.parent.touch(context.props.network);
-        }
-      }
-    }, context.children);
-  }
-};
-
-var email = {"sharer":"mailto:?subject=@title&body=@url%0D%0A%0D%0A@description","type":"direct"};
-var facebook = {"sharer":"https://www.facebook.com/sharer/sharer.php?u=@url&title=@title&description=@description&quote=@quote&hashtag=@hashtags","type":"popup"};
-var googleplus = {"sharer":"https://plus.google.com/share?url=@url","type":"popup"};
-var line = {"sharer":"http://line.me/R/msg/text/?@description%0D%0A@url","type":"popup"};
-var linkedin = {"sharer":"https://www.linkedin.com/shareArticle?mini=true&url=@url&title=@title&summary=@description","type":"popup"};
-var odnoklassniki = {"sharer":"https://connect.ok.ru/dk?st.cmd=WidgetSharePreview&st.shareUrl=@url&st.comments=@description","type":"popup"};
-var pinterest = {"sharer":"https://pinterest.com/pin/create/button/?url=@url&media=@media&description=@title","type":"popup"};
-var reddit = {"sharer":"https://www.reddit.com/submit?url=@url&title=@title","type":"popup"};
-var skype = {"sharer":"https://web.skype.com/share?url=@description%0D%0A@url","type":"popup"};
-var telegram = {"sharer":"https://t.me/share/url?url=@url&text=@description","type":"popup"};
-var twitter = {"sharer":"https://twitter.com/intent/tweet?text=@title&url=@url&hashtags=@hashtags@twitteruser","type":"popup"};
-var viber = {"sharer":"viber://forward?text=@url @description","type":"direct"};
-var vk = {"sharer":"https://vk.com/share.php?url=@url&title=@title&description=@description&image=@media&noparse=true","type":"popup"};
-var weibo = {"sharer":"http://service.weibo.com/share/share.php?url=@url&title=@title","type":"popup"};
-var whatsapp = {"sharer":"whatsapp://send?text=@description%0D%0A@url","type":"direct","action":"share/whatsapp/share"};
-var sms = {"sharer":"sms:?body=@url%20@description","type":"direct"};
-var BaseNetworks = {
-	email: email,
-	facebook: facebook,
-	googleplus: googleplus,
-	line: line,
-	linkedin: linkedin,
-	odnoklassniki: odnoklassniki,
-	pinterest: pinterest,
-	reddit: reddit,
-	skype: skype,
-	telegram: telegram,
-	twitter: twitter,
-	viber: viber,
-	vk: vk,
-	weibo: weibo,
-	whatsapp: whatsapp,
-	sms: sms
-};
-
-var inBrowser = typeof window !== 'undefined';
-var $window = inBrowser ? window : null;
-
-var SocialSharing = {
-  props: {
-    /**
-     * URL to share.
-     * @var string
-     */
-    url: {
-      type: String,
-      default: inBrowser ? window.location.href : ''
-    },
-
-    /**
-     * Sharing title, if available by network.
-     * @var string
-     */
-    title: {
-      type: String,
-      default: ''
-    },
-
-    /**
-     * Sharing description, if available by network.
-     * @var string
-     */
-    description: {
-      type: String,
-      default: ''
-    },
-
-    /**
-     * Facebook quote
-     * @var string
-     */
-    quote: {
-      type: String,
-      default: ''
-    },
-
-    /**
-     * Twitter hashtags
-     * @var string
-     */
-    hashtags: {
-      type: String,
-      default: ''
-    },
-
-    /**
-     * Twitter user.
-     * @var string
-     */
-    twitterUser: {
-      type: String,
-      default: ''
-    },
-
-    /**
-     * Flag that indicates if counts should be retrieved.
-     * - NOT WORKING IN CURRENT VERSION
-     * @var mixed
-     */
-    withCounts: {
-      type: [String, Boolean],
-      default: false
-    },
-
-    /**
-     * Google plus key.
-     * @var string
-     */
-    googleKey: {
-      type: String,
-      default: undefined
-    },
-
-    /**
-     * Pinterest Media URL.
-     * Specifies the image/media to be used.
-     */
-    media: {
-      type: String,
-      default: ''
-    },
-
-    /**
-     * Network sub component tag.
-     * Default to span tag
-     */
-    networkTag: {
-      type: String,
-      default: 'span'
-    },
-
-    /**
-     * Additional or overridden networks.
-     * Default to BaseNetworks
-     */
-    networks: {
-      type: Object,
-      default: function () {
-        return {};
-      }
-    }
-  },
-
-  data: function data () {
-    return {
-      /**
-       * Available sharing networks.
-       * @param object
-       */
-      baseNetworks: BaseNetworks,
-
-      /**
-       * Popup settings.
-       * @param object
-       */
-      popup: {
-        status: false,
-        resizable: true,
-        toolbar: false,
-        menubar: false,
-        scrollbars: false,
-        location: false,
-        directories: false,
-        width: 626,
-        height: 436,
-        top: 0,
-        left: 0,
-        window: undefined,
-        interval: null
-      }
-    };
-  },
-
-  methods: {
-    /**
-     * Returns generated sharer url.
-     *
-     * @param network Social network key.
-     */
-    createSharingUrl: function createSharingUrl (network) {
-      return this.baseNetworks[network].sharer
-        .replace(/@url/g, encodeURIComponent(this.url))
-        .replace(/@title/g, encodeURIComponent(this.title))
-        .replace(/@description/g, encodeURIComponent(this.description))
-        .replace(/@quote/g, encodeURIComponent(this.quote))
-        .replace(/@hashtags/g, this.generateHashtags(network, this.hashtags))
-        .replace(/@media/g, this.media)
-        .replace(/@twitteruser/g, this.twitterUser ? '&via=' + this.twitterUser : '');
-    },
-    /**
-     * Encode hashtags for the specified social network.
-     *
-     * @param  network Social network key
-     * @param  hashtags All hashtags specified
-     */
-    generateHashtags: function generateHashtags (network, hashtags) {
-      if (network === 'facebook' && hashtags.length > 0) {
-        return '%23' + hashtags.split(',')[0];
-      }
-
-      return hashtags;
-    },
-    /**
-     * Shares URL in specified network.
-     *
-     * @param network Social network key.
-     */
-    share: function share (network) {
-      this.openSharer(network, this.createSharingUrl(network));
-
-      this.$root.$emit('social_shares_open', network, this.url);
-      this.$emit('open', network, this.url);
-    },
-
-    /**
-     * Touches network and emits click event.
-     *
-     * @param network Social network key.
-     */
-    touch: function touch (network) {
-      window.open(this.createSharingUrl(network), '_self');
-
-      this.$root.$emit('social_shares_open', network, this.url);
-      this.$emit('open', network, this.url);
-    },
-
-    /**
-     * Opens sharer popup.
-     *
-     * @param network Social network key
-     * @param url Url to share.
-     */
-    openSharer: function openSharer (network, url) {
-      var this$1 = this;
-
-      // If a popup window already exist it will be replaced, trigger a close event.
-      var popupWindow = null;
-      if (popupWindow && this.popup.interval) {
-        clearInterval(this.popup.interval);
-
-        popupWindow.close();// Force close (for Facebook)
-
-        this.$root.$emit('social_shares_change', network, this.url);
-        this.$emit('change', network, this.url);
-      }
-
-      popupWindow = window.open(
-        url,
-        'sharer',
-        'status=' + (this.popup.status ? 'yes' : 'no') +
-        ',height=' + this.popup.height +
-        ',width=' + this.popup.width +
-        ',resizable=' + (this.popup.resizable ? 'yes' : 'no') +
-        ',left=' + this.popup.left +
-        ',top=' + this.popup.top +
-        ',screenX=' + this.popup.left +
-        ',screenY=' + this.popup.top +
-        ',toolbar=' + (this.popup.toolbar ? 'yes' : 'no') +
-        ',menubar=' + (this.popup.menubar ? 'yes' : 'no') +
-        ',scrollbars=' + (this.popup.scrollbars ? 'yes' : 'no') +
-        ',location=' + (this.popup.location ? 'yes' : 'no') +
-        ',directories=' + (this.popup.directories ? 'yes' : 'no')
-      );
-
-      popupWindow.focus();
-
-      // Create an interval to detect popup closing event
-      this.popup.interval = setInterval(function () {
-        if (popupWindow.closed) {
-          clearInterval(this$1.popup.interval);
-
-          popupWindow = undefined;
-
-          this$1.$root.$emit('social_shares_close', network, this$1.url);
-          this$1.$emit('close', network, this$1.url);
-        }
-      }, 500);
-    }
-  },
-
-  /**
-   * Merge base networks list with user's list
-   */
-  beforeMount: function beforeMount () {
-    this.baseNetworks = Vue.util.extend(this.baseNetworks, this.networks);
-  },
-
-  /**
-   * Sets popup default dimensions.
-   */
-  mounted: function mounted () {
-    if (!inBrowser) {
-      return;
-    }
-
-    /**
-     * Center the popup on dual screens
-     * http://stackoverflow.com/questions/4068373/center-a-popup-window-on-screen/32261263
-     */
-    var dualScreenLeft = $window.screenLeft !== undefined ? $window.screenLeft : screen.left;
-    var dualScreenTop = $window.screenTop !== undefined ? $window.screenTop : screen.top;
-
-    var width = $window.innerWidth ? $window.innerWidth : (document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width);
-    var height = $window.innerHeight ? $window.innerHeight : (document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height);
-
-    this.popup.left = ((width / 2) - (this.popup.width / 2)) + dualScreenLeft;
-    this.popup.top = ((height / 2) - (this.popup.height / 2)) + dualScreenTop;
-  },
-
-  /**
-   * Set component aliases for buttons and links.
-   */
-  components: {
-    'network': SocialSharingNetwork
-  }
-};
-
-SocialSharing.version = '2.4.3';
-
-SocialSharing.install = function (Vue) {
-  Vue.component('social-sharing', SocialSharing);
-};
-
-if (typeof window !== 'undefined') {
-  window.SocialSharing = SocialSharing;
-}
-
-module.exports = SocialSharing;
-
-/***/ }),
-
 /***/ "53e2":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -6267,6 +5885,13 @@ $export.U = 64;  // safe
 $export.R = 128; // real proto method for `library`
 module.exports = $export;
 
+
+/***/ }),
+
+/***/ "650b":
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
 
 /***/ }),
 
@@ -10596,13 +10221,6 @@ module.exports = function fence(state, startLine, endLine, silent) {
 
 /***/ }),
 
-/***/ "bf33":
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
-
-/***/ }),
-
 /***/ "c207":
 /***/ (function(module, exports) {
 
@@ -13023,17 +12641,6 @@ module.exports = function (O, D) {
 
 /***/ }),
 
-/***/ "ed7c":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_vuetify_loader_lib_loader_js_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ArticleView_vue_vue_type_style_index_0_id_a0b29194_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("bf33");
-/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_vuetify_loader_lib_loader_js_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ArticleView_vue_vue_type_style_index_0_id_a0b29194_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_vuetify_loader_lib_loader_js_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ArticleView_vue_vue_type_style_index_0_id_a0b29194_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
-/* unused harmony reexport * */
- /* unused harmony default export */ var _unused_webpack_default_export = (_node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_vuetify_loader_lib_loader_js_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ArticleView_vue_vue_type_style_index_0_id_a0b29194_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
-
-/***/ }),
-
 /***/ "f0f2":
 /***/ (function(module) {
 
@@ -13061,17 +12668,6 @@ module.exports = function (O, D) {
   return C === undefined || (S = anObject(C)[SPECIES]) == undefined ? D : aFunction(S);
 };
 
-
-/***/ }),
-
-/***/ "f6c5":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_vuetify_loader_lib_loader_js_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ArticleSocialSharing_vue_vue_type_style_index_0_id_12edb85c_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("07e6");
-/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_vuetify_loader_lib_loader_js_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ArticleSocialSharing_vue_vue_type_style_index_0_id_12edb85c_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_vuetify_loader_lib_loader_js_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ArticleSocialSharing_vue_vue_type_style_index_0_id_12edb85c_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
-/* unused harmony reexport * */
- /* unused harmony default export */ var _unused_webpack_default_export = (_node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_vuetify_loader_lib_loader_js_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ArticleSocialSharing_vue_vue_type_style_index_0_id_12edb85c_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 
@@ -13203,10 +12799,6 @@ var web_dom_iterable = __webpack_require__("ac6a");
 // EXTERNAL MODULE: external {"commonjs":"vue","commonjs2":"vue","root":"Vue"}
 var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__("8bbf");
 var external_commonjs_vue_commonjs2_vue_root_Vue_default = /*#__PURE__*/__webpack_require__.n(external_commonjs_vue_commonjs2_vue_root_Vue_);
-
-// EXTERNAL MODULE: ./node_modules/vue-social-sharing/dist/vue-social-sharing.common.js
-var vue_social_sharing_common = __webpack_require__("5299");
-var vue_social_sharing_common_default = /*#__PURE__*/__webpack_require__.n(vue_social_sharing_common);
 
 // CONCATENATED MODULE: ./node_modules/vuetify/lib/components/Vuetify/mixins/application.js
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -17020,152 +16612,22 @@ var ArticleCard_component = normalizeComponent(
 
 installComponents_default()(ArticleCard_component, {VBtn: VBtn,VCardActions: VCardActions,VCardText: VCardText,VCardTitle: VCardTitle,VContainer: VContainer,VDivider: VDivider,VFlex: VFlex,VIcon: VIcon_VIcon,VImg: VImg,VLayout: VLayout,VProgressCircular: VProgressCircular,VSlideYTransition: VSlideYTransition,VSpacer: VSpacer})
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"6a83156a-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/ArticleView.vue?vue&type=template&id=a0b29194&scoped=true&
-var ArticleViewvue_type_template_id_a0b29194_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"mb-5"},[_c('ArticleSocialSharing',{attrs:{"url":_vm.baseUrl + _vm.article.slug,"title":_vm.article.title}}),_c('v-img',{attrs:{"height":_vm.splashHeight,"src":_vm.article.splash}}),_c('v-layout',{attrs:{"row":"","wrap":""}},[_c('v-flex',{staticClass:"hidden-sm-and-down",attrs:{"md2":""}},[_c('div',{class:{
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"6a83156a-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/ArticleView.vue?vue&type=template&id=166b2649&scoped=true&
+var ArticleViewvue_type_template_id_166b2649_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"mb-5"},[_c('v-img',{attrs:{"height":_vm.splashHeight,"src":_vm.article.splash}}),_c('v-layout',{attrs:{"row":"","wrap":""}},[_c('v-flex',{staticClass:"hidden-sm-and-down",attrs:{"md2":""}},[_c('div',{class:{
           'sidebar-sticky': _vm.isTOCSticky,
           'sidebar-md-only': _vm.isMedium,
           'sidebar-lg-and-up': !_vm.isMedium
         }},[_c('ArticleTOC',{directives:[{name:"scroll",rawName:"v-scroll",value:(_vm.onScrollTOC),expression:"onScrollTOC"}],attrs:{"headings":_vm.headings,"activeHeading":_vm.activeHeading}}),_c('v-divider',{staticClass:"my-3"}),(_vm.article.reportpdf)?_c('v-btn',{staticClass:"small",attrs:{"block":"","outline":""}},[[_vm._v(_vm._s("Get PDF"))],_c('v-icon',[_vm._v("get_app")])],2):_vm._e(),(_vm.article.slidespdf)?_c('v-btn',{staticClass:"small",attrs:{"block":"","outline":""}},[[_vm._v(_vm._s("Get slides"))],_c('v-icon',[_vm._v("get_app")])],2):_vm._e()],1)]),_c('v-flex',{attrs:{"md10":""}},[_c('v-layout',{attrs:{"justify-center":"","row":"","id":"article-view"}},[_c('v-flex',{attrs:{"xs12":"","sm10":"","pt-4":""}},[_c('v-layout',{attrs:{"align-center":"","justify-space-between":"","row":""}},[_c('div',{staticClass:"greycolor font-lato uppercase"},[_vm._l((_vm.article.type),function(type){return _c('span',{key:type},[_vm._v(_vm._s(type))])}),[_vm._v(_vm._s("  |  "))],_vm._l((_vm.article.categories),function(category,i){return _c('span',{key:category,staticClass:"uppercase"},[(i > 0)?[_vm._v(_vm._s(", "))]:_vm._e(),[_vm._v(_vm._s(category))]],2)}),[_vm._v(_vm._s("  "))],(_vm.article.tags)?_vm._l((_vm.article.tags),function(tag){return _c('BasePropChip',{key:tag,on:{"chip-click":function($event){return _vm.$emit('tag-click', $event)}}},[[_vm._v(_vm._s(tag))]],2)}):_vm._e()],2),_c('BaseButton',{attrs:{"to":"/articles"}},[_vm._v("back")])],1),(_vm.article.external)?_c('ExternalContribution'):_vm._e(),_c('h1',{staticClass:"article-title"},[_vm._v(_vm._s(_vm.article.title))]),_c('div',{staticClass:"article-abstract greycolor font-lato my-3"},[[_vm._v(_vm._s(_vm.article.abstract))]],2),_c('div',{staticClass:"mb-3"},[_vm._l((_vm.article.authors),function(author,i){return _c('span',{key:i,staticClass:"uppercase font-oswald"},[(i > 0)?[_vm._v(_vm._s(_vm.article.authors.length > i + 1 ? ", " : " and "))]:_vm._e(),_c('router-link',{attrs:{"to":_vm._f("path")(author.slug,'authors')}},[[_vm._v(_vm._s(author.title))]],2)],2)}),[_vm._v(_vm._s("  |  "))],(_vm.article.date)?_c('span',{staticClass:"uppercase font-oswald"},[[_vm._v(_vm._s(_vm._f("formatDate")(_vm.article.date)))]],2):_vm._e(),[_vm._v(_vm._s("  |  "))],_c('v-icon',{attrs:{"id":"print-button"},on:{"click":_vm.printArticle}},[_vm._v("fa-print")])],2),(_vm.hasRelated)?[_c('v-divider'),_c('v-container',[_c('h2',{staticClass:"mb-3 light"},[_vm._v("Related")]),_c('ul',{staticClass:"font-lato"},[_vm._l((_vm.article.apps),function(app,i){return _c('li',{key:("app" + i)},[_c('router-link',{attrs:{"to":_vm._f("path")(app.slug,'apps')}},[[_vm._v(_vm._s(("[APP] " + (app.title))))]],2)],1)}),_vm._l((_vm.article.datasets),function(dataset,i){return _c('li',{key:("dataset" + i)},[_c('router-link',{attrs:{"to":_vm._f("path")(dataset.slug,'datasets')}},[[_vm._v(_vm._s(("[DATASET] " + (dataset.title))))]],2)],1)})],2)])]:_vm._e(),_c('v-divider'),_c('div',{directives:[{name:"scroll",rawName:"v-scroll",value:(_vm.onScroll),expression:"onScroll"}],staticClass:"article-body",domProps:{"innerHTML":_vm._s(_vm.articleBody.main)}}),_c('div',{staticClass:"my-5"},[(_vm.article.funding)?_c('BaseInfoBlock',{attrs:{"large":true},scopedSlots:_vm._u([{key:"title",fn:function(){return [_vm._v(_vm._s("Funding acknowledgment"))]},proxy:true},{key:"text",fn:function(){return [_vm._v(_vm._s(_vm.article.funding))]},proxy:true}],null,false,932980025)}):_vm._e(),(_vm.article.citation)?_c('BaseInfoBlock',{attrs:{"large":true},scopedSlots:_vm._u([{key:"title",fn:function(){return [_vm._v(_vm._s("Suggested citation"))]},proxy:true},{key:"text",fn:function(){return [_c('span',{domProps:{"innerHTML":_vm._s(_vm.article.citation)}}),(_vm.article.doi)?[_c('a',{attrs:{"href":_vm.article.doi}},[_vm._v(_vm._s(" " + _vm.article.doi))])]:_vm._e()]},proxy:true}],null,false,3506038485)}):_vm._e()],1),_c('v-divider'),_c('div',{directives:[{name:"scroll",rawName:"v-scroll",value:(_vm.onScroll),expression:"onScroll"}],staticClass:"article-body",domProps:{"innerHTML":_vm._s(_vm.articleBody.footer)}})],2)],1)],1)],1)],1)}
-var ArticleViewvue_type_template_id_a0b29194_scoped_true_staticRenderFns = []
+var ArticleViewvue_type_template_id_166b2649_scoped_true_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/ArticleView.vue?vue&type=template&id=a0b29194&scoped=true&
+// CONCATENATED MODULE: ./src/components/ArticleView.vue?vue&type=template&id=166b2649&scoped=true&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es6.regexp.split.js
 var es6_regexp_split = __webpack_require__("28a5");
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es6.regexp.replace.js
 var es6_regexp_replace = __webpack_require__("a481");
-
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"6a83156a-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/ArticleSocialSharing.vue?vue&type=template&id=12edb85c&scoped=true&
-var ArticleSocialSharingvue_type_template_id_12edb85c_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('transition',{attrs:{"name":"fade"}},[_c('social-sharing',{directives:[{name:"scroll",rawName:"v-scroll",value:(_vm.onScroll),expression:"onScroll"},{name:"show",rawName:"v-show",value:(_vm.fab),expression:"fab"}],attrs:{"url":_vm.url,"title":_vm.title},inlineTemplate:{render:function(){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('v-layout',{staticClass:"fixed-left",attrs:{"align-start":"","column":""}},[_c('network',{staticStyle:{"background-color":"#305891","padding":"0 7px","cursor":"pointer","border-bottom":"1px solid #fff"},attrs:{"network":"facebook"}},[_c('v-icon',{staticStyle:{"color":"white"},attrs:{"small":""}},[_vm._v("fa-facebook-square")])],1),_c('network',{staticStyle:{"background-color":"#4498c8","padding":"0 7px","cursor":"pointer","border-bottom":"1px solid #fff"},attrs:{"network":"linkedin"}},[_c('v-icon',{staticStyle:{"color":"white"},attrs:{"small":""}},[_vm._v("fa-linkedin-square")])],1),_c('network',{staticStyle:{"background-color":"#2ca8d2","padding":"0 7px","cursor":"pointer","border-bottom":"1px solid #fff"},attrs:{"network":"twitter"}},[_c('v-icon',{staticStyle:{"color":"white"},attrs:{"small":""}},[_vm._v("fa-twitter-square")])],1)],1)},staticRenderFns:[]}})],1)}
-var ArticleSocialSharingvue_type_template_id_12edb85c_scoped_true_staticRenderFns = []
-
-
-// CONCATENATED MODULE: ./src/components/ArticleSocialSharing.vue?vue&type=template&id=12edb85c&scoped=true&
-
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vuetify-loader/lib/loader.js!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/ArticleSocialSharing.vue?vue&type=script&lang=js&
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ var ArticleSocialSharingvue_type_script_lang_js_ = ({
-  props: {
-    url: String,
-    title: String
-  },
-  data: function data() {
-    return {
-      fab: false
-    };
-  },
-  methods: {
-    onScroll: function onScroll(e) {
-      if (typeof window === 'undefined') return;
-      var top = window.pageYOffset || e.target.scrollTop || 0;
-      this.fab = top > 50;
-    }
-  }
-});
-// CONCATENATED MODULE: ./src/components/ArticleSocialSharing.vue?vue&type=script&lang=js&
- /* harmony default export */ var components_ArticleSocialSharingvue_type_script_lang_js_ = (ArticleSocialSharingvue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./src/components/ArticleSocialSharing.vue?vue&type=style&index=0&id=12edb85c&scoped=true&lang=css&
-var ArticleSocialSharingvue_type_style_index_0_id_12edb85c_scoped_true_lang_css_ = __webpack_require__("f6c5");
-
-// EXTERNAL MODULE: ./node_modules/vuetify-loader/lib/runtime/installDirectives.js
-var installDirectives = __webpack_require__("269a");
-var installDirectives_default = /*#__PURE__*/__webpack_require__.n(installDirectives);
-
-// CONCATENATED MODULE: ./node_modules/vuetify/lib/directives/scroll.js
-function inserted(el, binding) {
-    var callback = binding.value;
-    var options = binding.options || { passive: true };
-    var target = binding.arg ? document.querySelector(binding.arg) : window;
-    if (!target) return;
-    target.addEventListener('scroll', callback, options);
-    el._onScroll = {
-        callback: callback,
-        options: options,
-        target: target
-    };
-}
-function scroll_unbind(el) {
-    if (!el._onScroll) return;
-    var _el$_onScroll = el._onScroll,
-        callback = _el$_onScroll.callback,
-        options = _el$_onScroll.options,
-        target = _el$_onScroll.target;
-
-    target.removeEventListener('scroll', callback, options);
-    delete el._onScroll;
-}
-/* harmony default export */ var directives_scroll = ({
-    inserted: inserted,
-    unbind: scroll_unbind
-});
-//# sourceMappingURL=scroll.js.map
-// CONCATENATED MODULE: ./src/components/ArticleSocialSharing.vue
-
-
-
-
-
-
-/* normalize component */
-
-var ArticleSocialSharing_component = normalizeComponent(
-  components_ArticleSocialSharingvue_type_script_lang_js_,
-  ArticleSocialSharingvue_type_template_id_12edb85c_scoped_true_render,
-  ArticleSocialSharingvue_type_template_id_12edb85c_scoped_true_staticRenderFns,
-  false,
-  null,
-  "12edb85c",
-  null
-  
-)
-
-/* harmony default export */ var ArticleSocialSharing = (ArticleSocialSharing_component.exports);
-
-/* vuetify-loader */
-
-
-
-installComponents_default()(ArticleSocialSharing_component, {VIcon: VIcon_VIcon,VLayout: VLayout})
-
-
-/* vuetify-loader */
-
-
-installDirectives_default()(ArticleSocialSharing_component, {Scroll: directives_scroll})
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"6a83156a-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/ArticleTOC.vue?vue&type=template&id=64b73974&scoped=true&
 var ArticleTOCvue_type_template_id_64b73974_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"toc"}},[_c('h3',{staticClass:"uppercase font-oswald mb-2"},[_vm._v("Table of contents")]),_c('v-divider'),_c('v-list',[_vm._l((_vm.headings),function(heading){return [_c('router-link',{key:heading.id,attrs:{"to":("#" + (heading.id))}},[_c('div',{staticClass:"large font-lato toc-item py-2 pl-4",class:{ 'toc-item-active': heading.id === _vm.activeHeading }},[[_vm._v(_vm._s(heading.innerText))]],2)])]})],2)],1)}
@@ -17500,12 +16962,6 @@ installComponents_default()(ArticleTOC_component, {VDivider: VDivider,VList: VLi
 //
 //
 //
-//
-//
-//
-//
-//
-
 
 
 
@@ -17529,7 +16985,6 @@ var md = __webpack_require__("d4cd")(mdOpts).use(__webpack_require__("e6f9")).us
 /* harmony default export */ var ArticleViewvue_type_script_lang_js_ = ({
   mixins: [allContentMixin],
   components: {
-    ArticleSocialSharing: ArticleSocialSharing,
     ArticleTOC: ArticleTOC,
     BaseButton: BaseButton,
     BaseInfoBlock: BaseInfoBlock,
@@ -17630,9 +17085,41 @@ var md = __webpack_require__("d4cd")(mdOpts).use(__webpack_require__("e6f9")).us
 });
 // CONCATENATED MODULE: ./src/components/ArticleView.vue?vue&type=script&lang=js&
  /* harmony default export */ var components_ArticleViewvue_type_script_lang_js_ = (ArticleViewvue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./src/components/ArticleView.vue?vue&type=style&index=0&id=a0b29194&scoped=true&lang=css&
-var ArticleViewvue_type_style_index_0_id_a0b29194_scoped_true_lang_css_ = __webpack_require__("ed7c");
+// EXTERNAL MODULE: ./src/components/ArticleView.vue?vue&type=style&index=0&id=166b2649&scoped=true&lang=css&
+var ArticleViewvue_type_style_index_0_id_166b2649_scoped_true_lang_css_ = __webpack_require__("061f");
 
+// EXTERNAL MODULE: ./node_modules/vuetify-loader/lib/runtime/installDirectives.js
+var installDirectives = __webpack_require__("269a");
+var installDirectives_default = /*#__PURE__*/__webpack_require__.n(installDirectives);
+
+// CONCATENATED MODULE: ./node_modules/vuetify/lib/directives/scroll.js
+function inserted(el, binding) {
+    var callback = binding.value;
+    var options = binding.options || { passive: true };
+    var target = binding.arg ? document.querySelector(binding.arg) : window;
+    if (!target) return;
+    target.addEventListener('scroll', callback, options);
+    el._onScroll = {
+        callback: callback,
+        options: options,
+        target: target
+    };
+}
+function scroll_unbind(el) {
+    if (!el._onScroll) return;
+    var _el$_onScroll = el._onScroll,
+        callback = _el$_onScroll.callback,
+        options = _el$_onScroll.options,
+        target = _el$_onScroll.target;
+
+    target.removeEventListener('scroll', callback, options);
+    delete el._onScroll;
+}
+/* harmony default export */ var directives_scroll = ({
+    inserted: inserted,
+    unbind: scroll_unbind
+});
+//# sourceMappingURL=scroll.js.map
 // CONCATENATED MODULE: ./src/components/ArticleView.vue
 
 
@@ -17644,11 +17131,11 @@ var ArticleViewvue_type_style_index_0_id_a0b29194_scoped_true_lang_css_ = __webp
 
 var ArticleView_component = normalizeComponent(
   components_ArticleViewvue_type_script_lang_js_,
-  ArticleViewvue_type_template_id_a0b29194_scoped_true_render,
-  ArticleViewvue_type_template_id_a0b29194_scoped_true_staticRenderFns,
+  ArticleViewvue_type_template_id_166b2649_scoped_true_render,
+  ArticleViewvue_type_template_id_166b2649_scoped_true_staticRenderFns,
   false,
   null,
-  "a0b29194",
+  "166b2649",
   null
   
 )
@@ -20229,8 +19716,6 @@ installComponents_default()(Footer_component, {VFlex: VFlex,VFooter: VFooter,VIc
 
 
 
-
-external_commonjs_vue_commonjs2_vue_root_Vue_default.a.use(vue_social_sharing_common_default.a);
 var Components = {
   RHAppCard: AppCard,
   RHAppView: AppView,
