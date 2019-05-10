@@ -1,9 +1,6 @@
 import Vue from "vue";
-import './plugins/vuetify'
 import Router from "vue-router";
-import Vuetify from "vuetify";
-import SocialSharing from "vue-social-sharing";
-import "vuetify/dist/vuetify.min.css";
+import "./plugins/vuetify";
 import "@/assets/style.css";
 
 import App from "./App.vue";
@@ -19,8 +16,6 @@ import RHFooter from "@/components/Footer.vue";
 
 Vue.config.productionTip = false;
 Vue.use(Router);
-Vue.use(Vuetify);
-Vue.use(SocialSharing);
 
 const router = new Router({
   mode: "history"
