@@ -1,4 +1,5 @@
 import Vue from "vue";
+import './plugins/vuetify'
 import Router from "vue-router";
 import Vuetify from "vuetify";
 import SocialSharing from "vue-social-sharing";

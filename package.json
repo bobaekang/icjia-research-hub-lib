@@ -7,6 +7,14 @@
     "build": "vue-cli-service build --target lib --name icjia-research-hub-lib ./src/components/index.js",
     "lint": "vue-cli-service lint"
   },
+  "main": "./dist/icjia-research-hub-lib.common.js",
+  "files": [
+    "dist/*",
+    "src/*",
+    "public/*",
+    "*.json",
+    "*.js"
+  ],
   "dependencies": {
     "core-js": "^2.6.5",
     "markdown-it": "^8.4.2",
@@ -16,14 +24,6 @@
     "vue-social-sharing": "^2.4.3",
     "vuetify": "^1.5.14"
   },
-  "files": [
-    "dist/*",
-    "src/*",
-    "public/*",
-    "*.json",
-    "*.js"
-  ],
-  "main": "./dist/icjia-research-hub-lib.common.js",
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.6.0",
     "@vue/cli-plugin-eslint": "^3.6.0",
@@ -31,8 +31,12 @@
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1",
+    "vue-cli-plugin-vuetify": "^0.5.0",
     "vue-router": "^3.0.6",
-    "vue-template-compiler": "^2.5.21"
+    "vue-template-compiler": "^2.5.21",
+    "vuetify-loader": "^1.0.5"
   },
   "eslintConfig": {
     "root": true,
