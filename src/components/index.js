@@ -1,7 +1,24 @@
 import Vue from "vue";
-import Vuetify from "vuetify";
+// import Vuetify, {
+//   VApp,
+//   VBtn,
+//   VContainer,
+//   VCard,
+//   VCardActions,
+//   VCardText,
+//   VCardTitle,
+//   VDivider,
+//   VFlex,
+//   VFooter,
+//   VIcon,
+//   VLayout,
+//   VList,
+//   VSpacer,
+//   VToolbar,
+//   VToolbarTitle
+// } from "vuetify/lib";
+import "../plugins/vuetify";
 import SocialSharing from "vue-social-sharing";
-import "vuetify/dist/vuetify.min.css";
 import "@/assets/style.css";
 
 import RHAppCard from "./AppCard.vue";
@@ -15,7 +32,26 @@ import RHDatasetCard from "./DatasetCard.vue";
 import RHDatasetView from "./DatasetView.vue";
 import RHFooter from "./Footer.vue";
 
-Vue.use(Vuetify);
+// Vue.use(Vuetify, {
+//   components: {
+//     VApp,
+//     VBtn,
+//     VContainer,
+//     VCard,
+//     VCardActions,
+//     VCardText,
+//     VCardTitle,
+//     VDivider,
+//     VFlex,
+//     VFooter,
+//     VIcon,
+//     VLayout,
+//     VList,
+//     VSpacer,
+//     VToolbar,
+//     VToolbarTitle
+//   }
+// });
 Vue.use(SocialSharing);
 
 const Components = {
