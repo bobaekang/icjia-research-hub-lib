@@ -21,7 +21,6 @@
     "markdown-it-anchor": "^5.0.2",
     "markdown-it-footnote": "^3.0.1",
     "vue": "^2.6.10",
-    "vue-social-sharing": "^2.4.3",
     "vuetify": "^1.5.14"
   },
   "devDependencies": {

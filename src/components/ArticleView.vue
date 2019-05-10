@@ -1,10 +1,5 @@
 <template>
   <div class="mb-5">
-    <ArticleSocialSharing
-      :url="baseUrl + article.slug"
-      :title="article.title"
-    />
-
     <v-img :height="splashHeight" :src="article.splash"></v-img>
 
     <v-layout row wrap>
@@ -170,7 +165,6 @@
 
 <script>
 import { allContentMixin } from "@/mixins/contentMixin";
-import ArticleSocialSharing from "@/components/ArticleSocialSharing";
 import ArticleTOC from "@/components/ArticleTOC";
 import BaseButton from "@/components/BaseButton";
 import BaseInfoBlock from "@/components/BaseInfoBlock";
@@ -200,7 +194,6 @@ const md = require("markdown-it")(mdOpts)
 export default {
   mixins: [allContentMixin],
   components: {
-    ArticleSocialSharing,
     ArticleTOC,
     BaseButton,
     BaseInfoBlock,

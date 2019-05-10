@@ -1,5 +1,4 @@
 import Vue from "vue";
-import SocialSharing from "vue-social-sharing";
 import "../plugins/vuetify";
 import "@/assets/style.css";
 
@@ -13,8 +12,6 @@ import RHBaseToolbar from "./BaseToolbar.vue";
 import RHDatasetCard from "./DatasetCard.vue";
 import RHDatasetView from "./DatasetView.vue";
 import RHFooter from "./Footer.vue";
-
-Vue.use(SocialSharing);
 
 const Components = {
   RHAppCard,
