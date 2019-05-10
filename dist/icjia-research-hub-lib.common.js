@@ -13204,6 +13204,10 @@ var web_dom_iterable = __webpack_require__("ac6a");
 var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__("8bbf");
 var external_commonjs_vue_commonjs2_vue_root_Vue_default = /*#__PURE__*/__webpack_require__.n(external_commonjs_vue_commonjs2_vue_root_Vue_);
 
+// EXTERNAL MODULE: ./node_modules/vue-social-sharing/dist/vue-social-sharing.common.js
+var vue_social_sharing_common = __webpack_require__("5299");
+var vue_social_sharing_common_default = /*#__PURE__*/__webpack_require__.n(vue_social_sharing_common);
+
 // CONCATENATED MODULE: ./node_modules/vuetify/lib/components/Vuetify/mixins/application.js
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -14252,10 +14256,6 @@ var app = __webpack_require__("da64");
 external_commonjs_vue_commonjs2_vue_root_Vue_default.a.use(lib, {
   iconfont: 'md'
 });
-// EXTERNAL MODULE: ./node_modules/vue-social-sharing/dist/vue-social-sharing.common.js
-var vue_social_sharing_common = __webpack_require__("5299");
-var vue_social_sharing_common_default = /*#__PURE__*/__webpack_require__.n(vue_social_sharing_common);
-
 // EXTERNAL MODULE: ./src/assets/style.css
 var assets_style = __webpack_require__("7d05");
 
@@ -20216,24 +20216,6 @@ installComponents_default()(Footer_component, {VFlex: VFlex,VFooter: VFooter,VIc
 
 
 
- // import Vuetify, {
-//   VApp,
-//   VBtn,
-//   VContainer,
-//   VCard,
-//   VCardActions,
-//   VCardText,
-//   VCardTitle,
-//   VDivider,
-//   VFlex,
-//   VFooter,
-//   VIcon,
-//   VLayout,
-//   VList,
-//   VSpacer,
-//   VToolbar,
-//   VToolbarTitle
-// } from "vuetify/lib";
 
 
 
@@ -20247,26 +20229,6 @@ installComponents_default()(Footer_component, {VFlex: VFlex,VFooter: VFooter,VIc
 
 
 
- // Vue.use(Vuetify, {
-//   components: {
-//     VApp,
-//     VBtn,
-//     VContainer,
-//     VCard,
-//     VCardActions,
-//     VCardText,
-//     VCardTitle,
-//     VDivider,
-//     VFlex,
-//     VFooter,
-//     VIcon,
-//     VLayout,
-//     VList,
-//     VSpacer,
-//     VToolbar,
-//     VToolbarTitle
-//   }
-// });
 
 external_commonjs_vue_commonjs2_vue_root_Vue_default.a.use(vue_social_sharing_common_default.a);
 var Components = {
