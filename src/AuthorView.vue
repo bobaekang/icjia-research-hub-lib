@@ -62,9 +62,10 @@ export default {
     }
   },
   mounted() {
-    this.articleIds = this.item.articles;
+    const item = this.item;
+    this.articleIds = item.articles;
     Promise.all(
-      this.item.articles.map(async el => {
+      item.articles.map(async el => {
         return await this.getArticleInfo(el._id);
       })
     ).then(articles => {
@@ -72,8 +73,9 @@ export default {
     });
   },
   beforeUpdate() {
-    if (this.articleIds !== this.item.articles) {
-      this.articleIds = this.item.articles;
+    const item = this.item;
+    if (this.articleIds !== item.articles) {
+      this.articleIds = item.articles;
       Promise.all(
         this.item.articles.map(async el => {
           return await this.getArticleInfo(el._id);
