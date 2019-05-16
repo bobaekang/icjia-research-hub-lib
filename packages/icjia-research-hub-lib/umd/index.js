@@ -6729,6 +6729,13 @@ module.exports = __webpack_require__("584a").getIteratorMethod = function (it) {
 
 /***/ }),
 
+/***/ "7d05":
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
 /***/ "7d91":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -13791,6 +13798,9 @@ function checkVueVersion(Vue, requiredVue) {
 // EXTERNAL MODULE: ./node_modules/vuetify/src/stylus/app.styl
 var app = __webpack_require__("da64");
 
+// EXTERNAL MODULE: ./src/assets/style.css
+var assets_style = __webpack_require__("7d05");
+
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"1271d8d2-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./build-utils/global-vue-loader.js!./node_modules/vue-loader/lib??vue-loader-options!./src/AppCard.vue?vue&type=template&id=2baf5b0e&
 var AppCardvue_type_template_id_2baf5b0e_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('BaseCard',{attrs:{"external":_vm.app.external}},[_c('v-img',{attrs:{"height":"200px","src":_vm.app.image,"lazy-src":"https://via.placeholder.com/1/DDDDDD"}},[_c('v-layout',{attrs:{"slot":"placeholder","fill-height":"","align-center":"","justify-center":"","ma-0":""},slot:"placeholder"},[_c('v-progress-circular',{attrs:{"indeterminate":"","color":"grey lighten-3"}})],1)],1),_c('v-card-title',{class:_vm.app.external ? 'pt-1 pb-2' : '',attrs:{"primary-title":""}},[_c('v-flex',{attrs:{"xs12":""}},[(_vm.app.external)?_c('ExternalContribution'):_vm._e()],1),_c('v-layout',{attrs:{"row":"","wrap":""}},[_c('BaseTitleDisplay',{attrs:{"to":_vm._f("path")(_vm.app.slug,'apps')}},[[_vm._v(_vm._s(_vm.app.title))]],2),(_vm.app.tags)?_c('div',_vm._l((_vm.app.tags),function(tag){return _c('BasePropChip',{key:tag,on:{"chip-click":function($event){return _vm.$emit('tag-click', $event)}}},[[_vm._v(_vm._s(tag))]],2)}),1):_vm._e()],1)],1),_c('v-container',{attrs:{"py-0":"","px-3":""}},[_c('BasePropDisplay',{attrs:{"name":"Contributors"}},[(_vm.app.contributors)?_vm._l((_vm.app.contributors),function(contributor,i){return _c('span',{key:i},[(i > 1)?[_vm._v(_vm._s(_vm.app.contributors.length > i + 1 ? ", " : " and "))]:_vm._e(),_c('a',{attrs:{"href":contributor.url,"target":"_blank"}},[[_vm._v(_vm._s(contributor.title))]],2)],2)}):[_vm._v(_vm._s("ICJIA R&A staff"))]],2),(_vm.app.categories)?_c('BasePropDisplay',{attrs:{"name":"Categories"}},_vm._l((_vm.app.categories),function(category,i){return _c('span',{key:i},[(i > 0)?[_vm._v(_vm._s(", "))]:_vm._e(),[_vm._v(_vm._s(_vm._f("capitalize")(category)))]],2)}),0):_vm._e()],1),_c('v-card-actions',[_c('v-spacer'),_c('BaseButton',{attrs:{"to":_vm._f("path")(_vm.app.slug,'apps'),"icon":"more_horiz"}},[[_vm._v(_vm._s("more"))]],2)],1)],1)}
 var staticRenderFns = []
@@ -19776,6 +19786,7 @@ installComponents_default()(Footer_component, {VFlex: VFlex,VFooter: VFooter,VIc
 //   build-utils/update-file-index.js
 //
 // YOU SHOULD NEVER UPDATE THIS FILE DIRECTLY
+
 
 
 
