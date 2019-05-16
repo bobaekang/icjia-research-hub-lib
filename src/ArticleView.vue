@@ -12,12 +12,16 @@
           }"
         >
           <ArticleTOC
+            v-if="headings"
             :headings="headings"
             :activeHeading="activeHeading"
             v-scroll="onScrollTOC"
           />
 
-          <v-divider class="my-3"></v-divider>
+          <v-divider
+            v-if="article.reportpdf || article.slidespdf"
+            class="my-3"
+          ></v-divider>
 
           <v-btn v-if="article.reportpdf" block outline class="small">
             <template>{{ "Get PDF" }}</template>
