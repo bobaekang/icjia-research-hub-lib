@@ -17189,12 +17189,12 @@ installComponents_default()(ArticleView_component, {VBtn: VBtn,VContainer: VCont
 
 installDirectives_default()(ArticleView_component, {Scroll: directives_scroll})
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"1271d8d2-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./build-utils/global-vue-loader.js!./node_modules/vue-loader/lib??vue-loader-options!./src/AuthorView.vue?vue&type=template&id=4739879b&
-var AuthorViewvue_type_template_id_4739879b_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('v-card',{staticClass:"mb-5"},[_c('v-card-title',{attrs:{"primary-title":""}},[_c('h2',[_c('span',{staticClass:"small pl-2",staticStyle:{"color":"#666"}},[_vm._v("Authors")]),_c('v-icon',[_vm._v("chevron_right")]),[_vm._v(_vm._s(_vm.author.title))]],2)]),_c('v-divider'),_c('v-container',[_c('div',{staticClass:"mb-3"},[_c('h2',{staticClass:"mb-3 light"},[_vm._v("About this author")]),(_vm.author.description)?_c('p',[_vm._v(_vm._s(_vm.author.description))]):_c('p',{staticClass:"italic"},[_vm._v("(No description.)")])]),(_vm.author.articles.length > 0)?[_c('v-divider'),_c('div',{staticClass:"my-3"},[_c('h2',{staticClass:"mb-3 light"},[_vm._v("Articles by this author")]),_vm._l((_vm.articles),function(article){return _c('v-flex',{key:article.id,staticClass:"mb-3"},[_c('ArticleCard',{attrs:{"item":article}})],1)})],2)]:_vm._e()],2)],1)}
-var AuthorViewvue_type_template_id_4739879b_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"1271d8d2-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./build-utils/global-vue-loader.js!./node_modules/vue-loader/lib??vue-loader-options!./src/AuthorView.vue?vue&type=template&id=24dcae6d&
+var AuthorViewvue_type_template_id_24dcae6d_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('v-card',{staticClass:"mb-5"},[_c('v-card-title',{attrs:{"primary-title":""}},[_c('h2',[_c('span',{staticClass:"small pl-2",staticStyle:{"color":"#666"}},[_vm._v("Authors")]),_c('v-icon',[_vm._v("chevron_right")]),[_vm._v(_vm._s(_vm.author.title))]],2)]),_c('v-divider'),_c('v-container',[_c('div',{staticClass:"mb-3"},[_c('h2',{staticClass:"mb-3 light"},[_vm._v("About this author")]),(_vm.author.description)?_c('p',[_vm._v(_vm._s(_vm.author.description))]):_c('p',{staticClass:"italic"},[_vm._v("(No description.)")])]),(_vm.author.articles.length > 0)?[_c('v-divider'),_c('div',{staticClass:"my-3"},[_c('h2',{staticClass:"mb-3 light"},[_vm._v("Articles by this author")]),_vm._l((_vm.articles),function(article){return _c('v-flex',{key:article.id,staticClass:"mb-3"},[_c('ArticleCard',{attrs:{"item":article}})],1)})],2)]:_vm._e()],2)],1)}
+var AuthorViewvue_type_template_id_24dcae6d_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/AuthorView.vue?vue&type=template&id=4739879b&
+// CONCATENATED MODULE: ./src/AuthorView.vue?vue&type=template&id=24dcae6d&
 
 // EXTERNAL MODULE: ./node_modules/regenerator-runtime/runtime.js
 var runtime = __webpack_require__("96cf");
@@ -17411,8 +17411,8 @@ if (typeof window !== 'undefined' && window.Vue) {
 
 var AuthorView_component = normalizeComponent(
   src_AuthorViewvue_type_script_lang_js_,
-  AuthorViewvue_type_template_id_4739879b_render,
-  AuthorViewvue_type_template_id_4739879b_staticRenderFns,
+  AuthorViewvue_type_template_id_24dcae6d_render,
+  AuthorViewvue_type_template_id_24dcae6d_staticRenderFns,
   false,
   null,
   null,

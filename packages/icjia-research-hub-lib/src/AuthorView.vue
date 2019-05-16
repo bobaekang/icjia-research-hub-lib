@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import ArticleCard from "@/ArticleCard";
+import ArticleCard from "./ArticleCard";
 
 function sortByDate(items) {
   return items.sort((a, b) => {
