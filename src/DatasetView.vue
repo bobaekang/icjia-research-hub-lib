@@ -157,13 +157,13 @@
 </template>
 
 <script>
-import { allContentMixin, datasetMixin } from "@/mixins/contentMixin";
-import BaseButton from "@/components/BaseButton";
-import BaseCard from "@/components/BaseCard";
-import BaseInfoBlock from "@/components/BaseInfoBlock";
-import BasePropChip from "@/components/BasePropChip";
-import BasePropDisplay from "@/components/BasePropDisplay";
-import ExternalContribution from "@/components/ExternalContribution";
+import { allContentMixin, datasetMixin } from "./mixins/contentMixin";
+import BaseButton from "./components/BaseButton";
+import BaseCard from "./components/BaseCard";
+import BaseInfoBlock from "./components/BaseInfoBlock";
+import BasePropChip from "./components/BasePropChip";
+import BasePropDisplay from "./components/BasePropDisplay";
+import ExternalContribution from "./components/ExternalContribution";
 
 export default {
   mixins: [allContentMixin, datasetMixin],

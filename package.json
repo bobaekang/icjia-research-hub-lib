@@ -9,8 +9,9 @@
   },
   "main": "./dist/icjia-research-hub-lib.common.js",
   "files": [
-    "src/*",
+    "dist/*",
     "packages/*",
+    "src/*",
     "*.json",
     "*.js"
   ],

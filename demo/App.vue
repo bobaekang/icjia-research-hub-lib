@@ -100,7 +100,7 @@
   </v-app>
 </template>
 <script>
-import data from "@/assets/demo.json";
+import data from "../src/assets/demo.json";
 
 export default {
   data() {

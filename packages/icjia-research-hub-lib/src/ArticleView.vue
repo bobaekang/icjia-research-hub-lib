@@ -164,12 +164,12 @@
 </template>
 
 <script>
-import { allContentMixin } from "@/mixins/contentMixin";
-import ArticleTOC from "@/components/ArticleTOC";
-import BaseButton from "@/components/BaseButton";
-import BaseInfoBlock from "@/components/BaseInfoBlock";
-import BasePropChip from "@/components/BasePropChip";
-import ExternalContribution from "@/components/ExternalContribution";
+import { allContentMixin } from "./mixins/contentMixin";
+import ArticleTOC from "./components/ArticleTOC";
+import BaseButton from "./components/BaseButton";
+import BaseInfoBlock from "./components/BaseInfoBlock";
+import BasePropChip from "./components/BasePropChip";
+import ExternalContribution from "./components/ExternalContribution";
 
 const mdOpts = {
   html: true,

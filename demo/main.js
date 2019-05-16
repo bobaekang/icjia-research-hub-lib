@@ -2,7 +2,7 @@ import Vue from "vue";
 import Router from "vue-router";
 import Vuetify from "vuetify/lib";
 import "vuetify/src/stylus/app.styl";
-import "@/assets/style.css";
+import "../src/assets/style.css";
 
 import App from "./App.vue";
 import RHAppCard from "../src/AppCard.vue";

@@ -7,7 +7,7 @@
         target="_blank"
       >
         <img
-          src="@/assets/logo-icjia-small-blue-3.png"
+          src="./assets/logo-icjia-small-blue-3.png"
           :height="logoHpixel"
           alt="logo"
         />

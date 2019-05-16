@@ -124,13 +124,13 @@
 </template>
 
 <script>
-import { allContentMixin } from "@/mixins/contentMixin";
-import BaseButton from "@/components/BaseButton";
-import BaseCard from "@/components/BaseCard";
-import BasePropChip from "@/components/BasePropChip";
-import BasePropDisplay from "@/components/BasePropDisplay";
-import ExternalContribution from "@/components/ExternalContribution";
-import BaseInfoBlock from "@/components/BaseInfoBlock";
+import { allContentMixin } from "./mixins/contentMixin";
+import BaseButton from "./components/BaseButton";
+import BaseCard from "./components/BaseCard";
+import BasePropChip from "./components/BasePropChip";
+import BasePropDisplay from "./components/BasePropDisplay";
+import ExternalContribution from "./components/ExternalContribution";
+import BaseInfoBlock from "./components/BaseInfoBlock";
 
 export default {
   mixins: [allContentMixin],

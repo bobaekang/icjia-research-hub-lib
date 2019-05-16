@@ -101,13 +101,13 @@
 </template>
 
 <script>
-import { allContentMixin } from "@/mixins/contentMixin";
-import BaseButton from "@/components/BaseButton";
-import BaseCard from "@/components/BaseCard";
-import BasePropChip from "@/components/BasePropChip";
-import BasePropDisplay from "@/components/BasePropDisplay";
-import BaseTitleDisplay from "@/components/BaseTitleDisplay";
-import ExternalContribution from "@/components/ExternalContribution";
+import { allContentMixin } from "./mixins/contentMixin";
+import BaseButton from "./components/BaseButton";
+import BaseCard from "./components/BaseCard";
+import BasePropChip from "./components/BasePropChip";
+import BasePropDisplay from "./components/BasePropDisplay";
+import BaseTitleDisplay from "./components/BaseTitleDisplay";
+import ExternalContribution from "./components/ExternalContribution";
 
 export default {
   mixins: [allContentMixin],

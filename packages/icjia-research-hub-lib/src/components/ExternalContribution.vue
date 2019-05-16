@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import BasePropDisplay from "@/components/BasePropDisplay";
+import BasePropDisplay from "./BasePropDisplay";
 
 export default {
   components: {
