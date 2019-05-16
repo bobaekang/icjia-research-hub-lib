@@ -191,18 +191,21 @@ export default {
       return this.item;
     },
     hasRelated() {
+      const item = this.item;
       return (
-        (this.item.apps && this.item.apps.length) ||
-        (this.item.articles && this.item.articles.length)
+        (item.apps && item.apps.length) ||
+        (item.articles && item.articles.length)
       );
     },
     isDataCsv() {
-      return this.item.datafilename && this.item.datafilename !== "";
+      const item = this.item;
+      return item.datafilename && item.datafilename !== "";
     }
   },
   mounted() {
-    if (this.dataset.variables)
-      this.$refs.variables.innerHTML = this.array2table(this.dataset.variables);
+    const item = this.item;
+    if (item.variables)
+      this.$refs.variables.innerHTML = this.array2table(item.variables);
   },
   methods: {
     array2table(array) {
@@ -234,7 +237,7 @@ export default {
       );
     },
     async downloadHelper() {
-      await this.downloadData(this.dataset._id, this.isDataCsv);
+      await this.downloadData(this.item._id, this.isDataCsv);
       this.dialog = false;
     }
   }

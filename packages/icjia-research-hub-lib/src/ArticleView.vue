@@ -12,12 +12,16 @@
           }"
         >
           <ArticleTOC
+            v-if="headings"
             :headings="headings"
             :activeHeading="activeHeading"
             v-scroll="onScrollTOC"
           />
 
-          <v-divider class="my-3"></v-divider>
+          <v-divider
+            v-if="article.reportpdf || article.slidespdf"
+            class="my-3"
+          ></v-divider>
 
           <v-btn v-if="article.reportpdf" block outline class="small">
             <template>{{ "Get PDF" }}</template>
@@ -217,19 +221,21 @@ export default {
       return this.item;
     },
     hasRelated() {
+      const item = this.item;
       return (
-        (this.item.apps && this.item.apps.length) ||
-        (this.item.datasets && this.item.datasets.length)
+        (item.apps && item.apps.length) ||
+        (item.datasets && item.datasets.length)
       );
     },
     isMedium() {
       return this.$vuetify.breakpoint.name === "md";
     },
     articleBody() {
-      if (this.item.markdown) {
-        let markdown = this.item.markdown;
-        if (this.item.images) {
-          this.item.images.forEach(image => {
+      const item = this.item;
+      if (item.markdown) {
+        let markdown = item.markdown;
+        if (item.images) {
+          item.images.forEach(image => {
             markdown += `\n\n[${image.title}]: ${image.src}`;
           });
         }
@@ -242,8 +248,9 @@ export default {
       } else return "";
     },
     headings() {
-      if (this.item.markdown) {
-        const markdown = md.render(this.item.markdown);
+      const item = this.item;
+      if (item.markdown) {
+        const markdown = md.render(item.markdown);
         const doc = new DOMParser().parseFromString(markdown, "text/html");
         return doc.querySelectorAll("h2");
       } else {
@@ -256,11 +263,12 @@ export default {
       if (typeof window === "undefined") return;
 
       const top = window.pageYOffset || e.target.scrollTop || 0;
+      const headings = this.headings;
 
       if (top === 0) {
-        this.activeHeading = this.headings[0].id;
-      } else if (this.headings) {
-        this.headings.forEach(heading => {
+        this.activeHeading = headings[0].id;
+      } else if (headings) {
+        headings.forEach(heading => {
           let elHeading = this.$el.querySelector(`#${heading.id}`);
           let rect = elHeading.getBoundingClientRect();
           if (rect.top < 91 && this.activeHeading !== heading.id) {

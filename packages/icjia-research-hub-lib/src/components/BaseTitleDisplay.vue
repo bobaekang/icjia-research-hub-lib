@@ -1,6 +1,6 @@
-<template>
+<template functional>
   <h3>
-    <router-link :to="to">
+    <router-link :to="props.to">
       <slot></slot>
     </router-link>
   </h3>
@@ -11,5 +11,5 @@ export default {
   props: {
     to: String
   }
-}
+};
 </script>

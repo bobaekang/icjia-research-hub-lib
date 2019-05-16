@@ -150,9 +150,10 @@ export default {
       return this.item;
     },
     hasRelated() {
+      const item = this.item;
       return (
-        (this.item.articles && this.item.articles.length) ||
-        (this.item.datasets && this.item.datasets.length)
+        (item.articles && item.articles.length) ||
+        (item.datasets && item.datasets.length)
       );
     }
   }
