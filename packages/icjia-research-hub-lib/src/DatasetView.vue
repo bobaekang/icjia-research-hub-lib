@@ -181,7 +181,7 @@ export default {
   },
   props: {
     item: Object,
-    downloadData: Function
+    downloader: Function
   },
   data() {
     return {
@@ -241,7 +241,7 @@ export default {
       );
     },
     async downloadHelper() {
-      await this.downloadData(this.item._id, this.isDataCsv);
+      await this.downloader(this.item._id, this.isDataCsv);
       this.dialog = false;
     }
   }
