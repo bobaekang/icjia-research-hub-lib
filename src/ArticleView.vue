@@ -223,7 +223,7 @@ export default {
   },
   props: {
     item: Object,
-    downloadData: Function
+    downloadPDF: Function
   },
   data() {
     return {
@@ -277,6 +277,9 @@ export default {
     }
   },
   methods: {
+    async downloadHelper() {
+      await this.downloadPDF(this.item._id);
+    },
     onScroll(e) {
       if (typeof window === "undefined") return;
 
