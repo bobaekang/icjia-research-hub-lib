@@ -23,12 +23,24 @@
             class="my-3"
           ></v-divider>
 
-          <v-btn v-if="article.reportpdf" block outline class="small">
+          <v-btn
+            v-if="article.reportpdf"
+            block
+            outline
+            class="small"
+            @click="downloadHelper"
+          >
             <template>{{ "Get PDF" }}</template>
             <v-icon>get_app</v-icon>
           </v-btn>
 
-          <v-btn v-if="article.slidespdf" block outline class="small">
+          <v-btn
+            v-if="article.slidespdf"
+            block
+            outline
+            class="small"
+            @click="downloadHelper"
+          >
             <template>{{ "Get slides" }}</template>
             <v-icon>get_app</v-icon>
           </v-btn>
@@ -210,7 +222,8 @@ export default {
     ExternalContribution
   },
   props: {
-    item: Object
+    item: Object,
+    downloadData: Function
   },
   data() {
     return {
