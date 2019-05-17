@@ -28,7 +28,7 @@
             block
             outline
             class="small"
-            @click="downloadHelper"
+            @click="downloadHelper('report')"
           >
             <template>{{ "Get PDF" }}</template>
             <v-icon>get_app</v-icon>
@@ -39,7 +39,7 @@
             block
             outline
             class="small"
-            @click="downloadHelper"
+            @click="downloadHelper('slides')"
           >
             <template>{{ "Get slides" }}</template>
             <v-icon>get_app</v-icon>
@@ -277,8 +277,8 @@ export default {
     }
   },
   methods: {
-    async downloadHelper() {
-      await this.downloadPDF(this.item._id);
+    async downloadHelper(type) {
+      await this.downloadPDF(this.item._id, type);
     },
     onScroll(e) {
       if (typeof window === "undefined") return;
