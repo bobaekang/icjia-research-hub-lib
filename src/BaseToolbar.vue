@@ -5,6 +5,7 @@
         class="hidden-xs-only"
         href="http://www.icjia.state.il.us"
         target="_blank"
+        rel="noreferrer"
       >
         <img
           src="./assets/logo-icjia-small-blue-3.png"

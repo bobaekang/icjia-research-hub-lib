@@ -40,9 +40,15 @@
               app.contributors.length > i + 1 ? ", " : " and "
             }}</template>
 
-            <a :href="contributor.url" target="_blank">
+            <a
+              v-if="contributor.url"
+              :href="contributor.url"
+              target="_blank"
+              rel="noreferrer"
+            >
               <template>{{ contributor.title }}</template>
             </a>
+            <template v-else>{{ contributor.title }}</template>
           </span>
         </template>
 

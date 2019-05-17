@@ -146,9 +146,14 @@
                 <template v-slot:text>
                   <span v-html="article.citation"></span>
 
-                  <template v-if="article.doi">
-                    <a :href="article.doi">{{ " " + article.doi }}</a>
-                  </template>
+                  <a
+                    v-if="article.doi"
+                    :href="article.doi"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <template>{{ " " + article.doi }}</template>
+                  </a>
                 </template>
               </BaseInfoBlock>
             </div>

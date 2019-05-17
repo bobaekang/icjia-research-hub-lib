@@ -35,7 +35,12 @@
             dataset.sources.length > i + 1 ? ", " : " and "
           }}</template>
 
-          <a v-if="source.url" :href="source.url" target="_blank">
+          <a
+            v-if="source.url"
+            :href="source.url"
+            target="_blank"
+            rel="noreferrer"
+          >
             <template>{{ source.title }}</template>
           </a>
 

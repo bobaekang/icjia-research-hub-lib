@@ -2,17 +2,15 @@
   <v-footer height="auto">
     <v-layout justify-center row wrap>
       <v-flex text-xs-center>
-        <span>
-          <template>{{ "© " + year + " " }}</template>
-          <a :href="agency.url">{{ agency.name }}</a>
-        </span>
+        <template>{{ "© " + year + " " }}</template>
+        <a :href="agency.url" target="_blank" rel="noreferrer">
+          <template>{{ agency.name }}</template>
+        </a>
         <template>{{ " | " }}</template>
-        <span>
-          <a :href="github.url">
-            <template>{{ github.version + " " }}</template>
-            <v-icon>fa fa-github</v-icon>
-          </a>
-        </span>
+        <a :href="github.url" target="_blank" rel="noreferrer">
+          <template>{{ github.version + " " }}</template>
+          <v-icon>fa fa-github</v-icon>
+        </a>
       </v-flex>
     </v-layout>
   </v-footer>
