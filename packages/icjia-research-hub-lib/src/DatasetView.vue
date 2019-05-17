@@ -58,10 +58,14 @@
                 dataset.sources.length > i + 1 ? ", " : " and "
               }}</template>
 
-              <a v-if="source.url" :href="source.url" target="_blank">
+              <a
+                v-if="source.url"
+                :href="source.url"
+                target="_blank"
+                rel="noreferrer"
+              >
                 {{ source.title }}
               </a>
-
               <template v-else>{{ source.title }}</template>
             </span>
           </BasePropDisplay>
