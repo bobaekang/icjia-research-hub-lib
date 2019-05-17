@@ -1,6 +1,6 @@
 {
   "name": "icjia-research-hub-lib",
-  "description": "An example component library built with Vue CLI 3 and Vuetify.",
+  "description": "A custom component library for ICJIA Research Hub built with Vue CLI 3 and Vuetify.",
   "author": {
     "name": "Bobae Kang",
     "email": "bkang.dev@gmail.com",
