@@ -1,13 +1,24 @@
 <template>
   <v-app>
-    <RHBaseToolbar>
+    <RHBaseToolbar :menu="true">
       <template v-slot:titleExtra>
         <span class="light"> Library Demo</span>
+      </template>
+      <template v-slot:toolbarItems>
+        <v-btn v-for="view in views" :key="view" flat>
+          <template>{{ view }}</template>
+        </v-btn>
+      </template>
+
+      <template v-slot:toolbarDrawerItems>
+        <v-list-tile v-for="(view, i) in views" :key="i">
+          <v-list-tile-title>{{ view }}</v-list-tile-title>
+        </v-list-tile>
       </template>
     </RHBaseToolbar>
 
     <v-layout justify-center row wrap>
-      <v-flex xs12 md3>
+      <v-flex xs9 md3>
         <v-radio-group v-model="contentType" row>
           <v-radio label="App" value="app"></v-radio>
           <v-radio label="Article" value="article"></v-radio>
@@ -15,7 +26,7 @@
         </v-radio-group>
       </v-flex>
 
-      <v-flex xs12 md2>
+      <v-flex xs9 md2>
         <v-switch
           v-model="external"
           :label="`External contribution: ${external.toString()}`"
@@ -23,7 +34,7 @@
         ></v-switch>
       </v-flex>
 
-      <v-flex xs12 md1>
+      <v-flex xs9 md1>
         <v-switch
           v-model="view"
           :label="`Full view: ${view.toString()}`"
@@ -103,10 +114,12 @@
 import data from "../src/assets/demo.json";
 
 export default {
+  name: "App",
   data() {
     return {
       contentType: "app",
       view: false,
+      views: ["foo", "bar"],
       external: false,
       componentKey: 0,
       data,
