@@ -2,8 +2,6 @@
 const fs = require("fs-extra");
 const path = require("path");
 const { execSync } = require("child_process");
-const libConfig = require("../lib");
-const _ = require("lodash");
 
 console.info("🚀 Let's build this thing!");
 
@@ -11,13 +9,8 @@ console.info("🚀 Let's build this thing!");
 console.info("📝 Updating index file");
 require("./update-index-file");
 
-// Get the names of all components in the src directory
-// const componentNames = require("./component-names");
-
 // Get the binary for vue-cli-service
 const vueCliServicePath = getPath("../node_modules/.bin/vue-cli-service");
-
-// fs.emptyDirSync(getPath("../packages"));
 
 // Build the main lib, with all components packaged into a plugin
 console.info("🏗 Building main library");
@@ -92,7 +85,7 @@ export * from './src${componentName ? "/" + componentName + ".vue" : ""}'
   if (componentName) {
     const componentPackageFolder = path.resolve(
       __dirname,
-      `../packages/${libConfig.name}/${componentName}`
+      `../lib/${componentName}`
     );
     fs.copySync(destPackageFolder, componentPackageFolder, {
       filter: filePath => {
