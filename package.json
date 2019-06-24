@@ -3,14 +3,12 @@
   "version": "0.1.0",
   "scripts": {
     "dev": "node build-utils/update-index-file.js && vue-cli-service serve",
-    "build": "node build-utils/build-lib.js",
+    "build": "node build-utils/build-lib.js && node build-utils/export-css.js",
     "lint": "vue-cli-service lint"
   },
-  "main": "./dist/icjia-research-hub-lib.common.js",
   "files": [
-    "dist/*",
-    "packages/*",
-    "src/*",
+    "index.css",
+    "lib/*",
     "*.json",
     "*.js"
   ],
