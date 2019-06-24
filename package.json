@@ -9,7 +9,7 @@
   "files": [
     "index.css",
     "lib/*",
-    "*.json",
+    "package*.json",
     "*.js"
   ],
   "dependencies": {
